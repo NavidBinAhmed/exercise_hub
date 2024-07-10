@@ -34,22 +34,25 @@ def fib_last_digits(n, digits):
             b = b[-digits:]  # Keep only the last `digits` digits
     
     return b
-
-# Calculate the last 4 digits of the 1,000,000th Fibonacci number
+
 last_4_digits = fib_last_digits(1000000)
 print(''.join(map(str, last_4_digits)))'''
 
 
-#Matrix exponentials: fast
+#Matrix exponentials: found to be fast
 '''def matrix_mult(A, B):
-    """Multiplies two 2x2 matrices A and B."""
+
+#two 2x2 matrices A and B
     return [
         [A[0][0] * B[0][0] + A[0][1] * B[1][0], A[0][0] * B[0][1] + A[0][1] * B[1][1]],
         [A[1][0] * B[0][0] + A[1][1] * B[1][0], A[1][0] * B[0][1] + A[1][1] * B[1][1]],
     ]
 
 def matrix_pow(matrix, n):
-    """Raises the matrix to the power of n using exponentiation by squaring."""
+
+
+#Raises the matrix to the power of n using exponentiation by squaring
+
     result = [[1, 0], [0, 1]]  # Identity matrix
     base = matrix
 
@@ -61,8 +64,9 @@ def matrix_pow(matrix, n):
 
     return result
 
-def fib(n):
-    """Returns the n-th Fibonacci number using matrix exponentiation."""
+
+#Returns n-th Fibonacci using matrix expo
+def fib(n):
     if n == 0:
         return 0
     if n == 1:
@@ -71,15 +75,14 @@ def fib(n):
     F = [[1, 1], [1, 0]]
     result = matrix_pow(F, n - 1)
     return result[0][0]
-
-# Calculate the 1,000,000th Fibonacci number
+
 fib_1000000 = fib(1000000)
 print(fib_1000000)'''
 
 
 #array: could not even load
+#adding two nums
 '''def add_large_numbers(num1, num2):
-    """Adds two large numbers represented as arrays of digits."""
     carry = 0
     result = []
     len1, len2 = len(num1), len(num2)
@@ -93,8 +96,9 @@ print(fib_1000000)'''
         result.append(carry)
     return result[::-1]
 
-def fib_large(n):
-    """Computes the n-th Fibonacci number using array representation for large numbers."""
+
+#Computing n-th Fibonacci using array representation
+def fib_large(n):
     if n == 0:
         return [0]
     if n == 1:
@@ -106,18 +110,18 @@ def fib_large(n):
         c = add_large_numbers(a, b)
         a, b = b, c
     return b
-
-# Calculate the 1,000,000th Fibonacci number
+
 fib_1000000 = fib_large(1000000)
-print("".join(map(str, fib_1000000)))  # Convert array of digits to string and print
-
-# Print the last 4 digits of the 1,000,000th Fibonacci number
+print("".join(map(str, fib_1000000)))  
+#It cnverts array of digits to string
+
 print("".join(map(str, fib_1000000[-4:])))
 '''
 
-#string
+#string representation
 '''def add_large_numbers_str(num1, num2):
-    """Adds two large numbers represented as strings."""
+    
+#Adding 2 nums as string
     carry = 0
     result = []
     len1, len2 = len(num1), len(num2)
@@ -131,8 +135,9 @@ print("".join(map(str, fib_1000000[-4:])))
         result.append(str(carry))
     return ''.join(result[::-1])
 
-def fib_large_str(n):
-    """Computes the n-th Fibonacci number using string representation for large numbers."""
+
+#computation func
+def fib_large_str(n):
     if n == 0:
         return "0"
     if n == 1:
@@ -144,17 +149,13 @@ def fib_large_str(n):
         c = add_large_numbers_str(a, b)
         a, b = b, c
     return b
-
-# Calculate the 1,000,000th Fibonacci number
+
 fib_1000000_str = fib_large_str(1000000)
-print(fib_1000000_str)  # Print the entire number'''
-
-# Print the last 4 digits of the 1,000,000th Fibonacci number
-# print(fib_1000000_str[-4:])
+print(fib_1000000_str)
+
 
 #modular arithmetic
-'''def fib_large_mod(n, mod=10000):
-    """Computes the n-th Fibonacci number using modular arithmetic for the last 4 digits."""
+'''def fib_large_mod(n, mod=10000):
     if n == 0:
         return 0
     if n == 1:
@@ -166,15 +167,15 @@ print(fib_1000000_str)  # Print the entire number'''
         c = (a + b) % mod
         a, b = b, c
     return b
-
-# Calculate the last 4 digits of the 1,000,000th Fibonacci number
+
 fib_1000000_mod = fib_large_mod(1000000)
 print(fib_1000000_mod)'''
 
 
 #iterative dynamic programming
 '''def fib_large(n):
-    """Computes the n-th Fibonacci number using arbitrary-precision integers."""
+
+#Using arbitrary-precision integers
     if n == 0:
         return 0
     if n == 1:
@@ -187,13 +188,13 @@ print(fib_1000000_mod)'''
         a, b = b, c
     return b
 
-# Calculate the 1,000,000th Fibonacci number
 fib_1000000 = fib_large(1000000)
 print(fib_1000000)
 '''
 
 '''def fib_large_mod(n, mod=10**100):
-    """Computes the n-th Fibonacci number using modular arithmetic."""
+
+#using modular arithmetic
     if n == 0:
         return 0
     if n == 1:
@@ -205,19 +206,19 @@ print(fib_1000000)
         c = (a + b) % mod
         a, b = b, c
     return b
-
-# Calculate the 1,000,000th Fibonacci number with all digits
+
 fib_1000000_mod = fib_large_mod(1000000)
 print(fib_1000000_mod)'''
 
 '''
-now compare time and space complexity among matrix exponentiation (ok), array representation(not even run), 
-string representation (not even run), IDP (ok), modular arithmetic () ?
+now, will compare time and space complexity among matrix exponentiation (ok), array representation(not even run), 
+string representation (not even run), IDP (ok), modular arithmetic ()
 '''
+
+#dedimal, fixed & floating point arithmatic
 from decimal import Decimal, getcontext
 
-def fibonacci_fixed_point(n):
-    """ Computes the n-th Fibonacci number using fixed-point arithmetic. """
+def fibonacci_fixed_point(n):
     if n == 0:
         return Decimal('0')
     if n == 1:
@@ -229,10 +230,9 @@ def fibonacci_fixed_point(n):
     
     return b
 
-# Set the precision for Decimal arithmetic
-getcontext().prec = 100  # Adjust precision as needed
+# Setting adjustable precision
+getcontext().prec = 100
 
-# Calculate the 1,000,000th Fibonacci number using fixed-point arithmetic
 fib_1000000 = fibonacci_fixed_point(1000000)
 print(fib_1000000)
 
