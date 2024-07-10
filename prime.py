@@ -1,3 +1,30 @@
+'''
+Problem Statement: Prime Numbers:  
+Write a Python script to find the first 1,000 prime numbers.  
+
+Procedure:
+2) The result will be kept in dictionary variable named “prime_dict” and kept in the file named “prime.txt”  
+
+3) The dictionary prime_dict has the string-type keys “1”, “2”, “3”, … and there should be no keys without element.  
+
+4) The dictionary prime_dict has the list-type values 
+[2,3,5,7], [11,13,17,19,23,29,31,37,41,43,47,53,59,61,67,71,73,79,83,89,97], [101,103,107,...,991,997], 
+
+… associated with keys “1”, “2”, “3”, …, respectively. 
+
+That is the key is the number of digits of the prime numbers.  
+
+5) The list of values must be sorted.  
+
+6) The file “prime.txt” shall have the format exactly like this.  
+
+7) Three dots at the end indicate that there are more lines. 
+1:2,3,5,7 2:11,13,17,19,23,29,31,37,41,43,47,53,59,61,67,71,73,79,83,89,97 …  
+
+7) Before the program ends, print the value of prime_dict using print(prime_dict).
+'''
+
+
 import os
 
 def is_prime(num):
