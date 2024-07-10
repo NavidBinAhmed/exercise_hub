@@ -27,12 +27,14 @@ That is the key is the number of digits of the prime numbers.
 
 import os
 
-def is_prime(num):
-    """ Check if a number is prime """
+
+def is_prime(num):
     if num <= 1:
         return False
     if num <= 3:
         return True
+
+    #logic apply
     if num % 2 == 0 or num % 3 == 0:
         return False
     i = 5
@@ -42,16 +44,16 @@ def is_prime(num):
         i += 6
     return True
 
+
 def find_primes_up_to_n(n):
-    """ Find prime numbers up to n """
+    #prime numbers up to a specific range
     primes = []
     for num in range(2, n + 1):
         if is_prime(num):
             primes.append(num)
     return primes
 
-def write_primes_to_file(prime_dict, filename):
-    """ Write prime numbers organized by digit length to a file """
+def write_primes_to_file(prime_dict, filename):
     with open(filename, 'w') as file:
         for key in sorted(prime_dict):
             primes = ','.join(map(str, prime_dict[key]))
@@ -59,7 +61,9 @@ def write_primes_to_file(prime_dict, filename):
 
 def main():
     prime_dict = {}
-    primes = find_primes_up_to_n(7919)  # Finding primes up to 7919 (approximate 1000th prime)
+    primes = find_primes_up_to_n(7919)   
+
+#1000 prime nunbers takes it to 7919
     
     for prime in primes:
         digit_length = len(str(prime))
