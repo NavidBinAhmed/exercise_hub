@@ -1,4 +1,40 @@
-def Anagram(str1, str2):
+class Solution:
+    def isAnagram(self, str1: str, str2: str) -> bool:
+        # Convert both strings to lowercase
+        str1 = str1.lower()
+        str2 = str2.lower()
+
+        # Early return if lengths differ
+        if len(str1) != len(str2):
+            return False
+
+        char_count = {}
+
+        # Count characters in the first string
+        for char in str1:
+            if char in char_count:
+                char_count[char] += 1
+            else:
+                char_count[char] = 1
+
+        # Decrease the count for the second string
+        for char in str2:
+            if char in char_count:
+                char_count[char] -= 1
+                if char_count[char] < 0:
+                    return False
+            else:
+                return False
+
+        return True
+
+
+
+
+
+
+#alternative solution : Leetcode not accepted, but used ASCII character conversion for upper and lower case characters
+'''def Anagram(str1, str2):
     dict = {}
     for i in range(len(str1)):
         if ord(str1[i]) <= 122 and ord(str1[i]) >= 97:
@@ -39,5 +75,5 @@ str2 = input("Enter str2: ")
 if Anagram(str1, str2):
     print("Yes")
 else:
-    print("No")
+    print("No")'''
     
