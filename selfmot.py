@@ -3015,30 +3015,96 @@ else:
 
 
 
+'''listvar = ['cat', 'tab', 'tac', 'bat', 'act']
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+for elements in range(0, len(listvar)):
+    for j in range(elements + 1, len(listvar)):
+        if sorted(listvar[j]) == sorted(listvar[elements]):
+            print("The anagrams are: ", listvar[elements], "and", listvar[j])
     
+'''
+
+
+'''words = ['car', 'bat', 'tac', 'tab', 'act',]
+anagrams = []
+non_anagrams = []
+
+for elements in range(0, len(words)):
+    found_anagram = False
+
+    for j in range (elements+1, len(words)):
+        if sorted(words[elements]) == sorted(words[j]):
+            print("The anagrams are: ", words[elements], "and", words[j])
+            found_anagram = True
+        
+            if words[elements] not in anagrams:
+                anagrams.append(words[elements])
+            if words[j] not in anagrams:
+                anagrams.append(words[j])
+    
+    if not found_anagram and words[elements] not in anagrams:
+            non_anagrams.append(words[elements])
+            
+print("The non-anagram words are: ", ','.join(non_anagrams))
+'''
+
+
+# find binary series
+'''def append_bits(x, L):
+    return [x + element for element in L]
+
+def generate_bit(n):
+    if n == 0: return []
+    if n == 1: return ['0', '1']
+
+    else:
+        return  (append_bits('0' , generate_bit(n-1)) +
+                append_bits('1' , generate_bit(n-1)))
+
+print(generate_bit(2))
+'''
+
+#class
+'''class Student:
+    school = 'Sakina Adarsha'
+
+#constructor
+    def __init__(self, m1, m2, m3):
+        self.m1 = m1
+        self.m2 = m2
+        self.m3 = m3
+
+#below is a method, called instance method
+    def avg(self):
+        return (self.m1+self.m2+self.m3)/3
+    
+    def get_m1(self):
+        return self.m1
+
+#class method
+    @classmethod
+    def info(cls):
+        return cls.school
+    
+    @staticmethod
+    def information():
+        print("Here is an example")
+
+create instance inside objects(s)
+s1 = Student(12, 15, 12)
+s2 = Student(33, 24, 24)
+
+print(s1.m1)
+print(s1.avg())
+print(s2.get_m1())
+print(Student.info())
+Student.information()
+'''
+
+'''
+list = ['12', '32', '43', '23', '44', '24', '54', '55']
+
+for i in range(0, len(list)):
+    if list[i] == '55':
+        print(i)'''
+
