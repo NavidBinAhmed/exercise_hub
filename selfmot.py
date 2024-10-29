@@ -3135,3 +3135,25 @@ arr = [1,2,4,3,5,6,4,2,5,15]
 x = 16
 result = linearSearch(arr, x)
 print(result)'''
+
+
+
+# find index, or -1
+'''def linearSearch(arr, x):
+    for i in range(0, len(arr)):
+        if arr[i] == x:
+            return i
+    return -1
+
+arr = [1,2,4,5,6]
+x = 2
+result = linearSearch(arr, x)
+print("The searching element is present at index", result)
+
+arr = [1,2,4,5,6]
+x = 7
+result = linearSearch(arr, x)
+print("The searching element is present at index", result)'''
+
+
+# binary search
