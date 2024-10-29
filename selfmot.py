@@ -3101,10 +3101,37 @@ print(Student.info())
 Student.information()
 '''
 
-'''
-list = ['12', '32', '43', '23', '44', '24', '54', '55']
+
+'''list = ['12', '32', '43', '23', '44', '24', '54', '55']
 
 for i in range(0, len(list)):
     if list[i] == '55':
-        print(i)'''
+        print(i)
+'''
 
+# find index of a specific element
+
+'''list = [1, 2, 3, 4, 5]
+
+for i in range(0, len(list)):
+    if list[i] == 5:
+        print(i)
+'''
+
+
+#array data structure implementation
+#search for an element '15' and if it's present in an array,
+#return the index of that element
+#suppose the searching element is not present in an array,
+#return -1
+
+'''def linearSearch(arr, x):
+    for i in range(0, len(arr)):
+        if arr[i] == x:
+            return i
+    return -1
+
+arr = [1,2,4,3,5,6,4,2,5,15]
+x = 16
+result = linearSearch(arr, x)
+print(result)'''
