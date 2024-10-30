@@ -3223,7 +3223,7 @@ result = binarySearch(num, low, high,target)
 print("The index for", target, "is", result)
 '''
 
-#binary search
+#binary search using recursion
 '''def binarySearch(low, high, target, array):
     while low <= high:
         mid = low + (high-low)//2
@@ -3243,3 +3243,27 @@ low = 0
 
 result = binarySearch(low, len(array)-1, target, array)
 print("The index is: ", result)'''
+
+#binary search without using recursion
+def binarySearch(low, high, target, array):
+    while low <= high:
+        mid = low + (high-low)//2
+        if array[mid] == target:
+            return mid
+        elif array[mid] < target:
+        #updating 'low' and 'high' parameters without using recursion
+            low = mid+1
+            #return binarySearch(mid+1, high, target, array)
+        else:
+            high = mid-1
+            #return binarySearch(low, mid-1, target, array)
+        
+    return -1
+
+
+array = [1,2,3,4,5,6,7,8,9,10]
+target = 11
+low = 0
+
+result = binarySearch(low, len(array)-1, target, array)
+print("The index is: ", result)
