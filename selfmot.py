@@ -3136,8 +3136,6 @@ x = 16
 result = linearSearch(arr, x)
 print(result)'''
 
-
-
 # find index, or -1
 '''def linearSearch(arr, x):
     for i in range(0, len(arr)):
@@ -3244,8 +3242,9 @@ low = 0
 result = binarySearch(low, len(array)-1, target, array)
 print("The index is: ", result)'''
 
+
 #binary search without using recursion
-def binarySearch(low, high, target, array):
+'''def binarySearch(low, high, target, array):
     while low <= high:
         mid = low + (high-low)//2
         if array[mid] == target:
@@ -3267,3 +3266,58 @@ low = 0
 
 result = binarySearch(low, len(array)-1, target, array)
 print("The index is: ", result)
+'''
+
+#find the first infinity from the list using binary search
+'''def binarySearch(low, high, target, array):
+    while low <= high:
+        mid = low + (high-low)//2
+        if array[mid] == target:
+            return mid
+        elif array[mid] < target:
+            return binarySearch(mid+1, high, target, array)
+        else:
+            return binarySearch(low, mid-1, target, array)
+    return -1
+
+given_array = [20, -30, 10, 5, 7, 0, 29, float('inf'), float('-inf'), float('inf')]
+array = sorted(given_array)
+print("The sorted array:", array)
+target = float('inf')
+low = 0
+high = len(array)-1
+
+result = binarySearch(low, high, target, array)
+print("The index of first infinity: ", result)
+'''
+
+# use linear search to find the first infinity
+'''def linearSearch(arr, x):
+    for i in range(0, len(arr)):
+        if arr[i] == float('inf'):
+            return i
+    return -1
+
+arr = [-1,20,24,-33,15,float('inf'),61,4,2,5,45, float('inf'),float('inf'),]
+#arr = sorted(array)
+#print(arr)
+x = float('inf')
+result = linearSearch(arr, x)
+print(result)
+'''
+
+
+'''def tdm(matrix, target):    
+    for i in range(0, len(matrix)):
+        for j in range(0, len(matrix[i])):
+            if matrix[i][j] == target:
+                return i,j
+    return -1
+
+matrix = [[1,3,4],
+          [5,6,7],
+          [8,9,10]]
+target = 10
+result = tdm(matrix, target)
+print(result)
+'''
