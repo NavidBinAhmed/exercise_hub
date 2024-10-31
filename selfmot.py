@@ -3319,5 +3319,79 @@ matrix = [[1,3,4],
           [8,9,10]]
 target = 10
 result = tdm(matrix, target)
-print(result)
+print(result)'''
+
+
+'''def tdm(matrix, target):
+    for i in range(0, len(matrix)):
+        for j in range(0, len(matrix[i])):
+            if matrix[i][j] == target:
+                return i,j
+    return -1
+
+matrix = [[1,3,4],
+          [5,6,7],
+          [8,9,10]]
+target = 6
+result = tdm(matrix, target)
+print("index for the target element:", result)
 '''
+
+#can be solved using binary search reducing time constant
+'''def searchMatrix(matrix, target):
+    if not matrix or not matrix[0]:
+        return False
+    
+    rows, cols = len(matrix), len(matrix[0])
+    left, right = 0, rows * cols - 1
+
+    while left <= right:
+        mid = (left + right) // 2
+        mid_value = matrix[mid // cols][mid % cols]  # Mapping mid to 2D matrix indices
+
+        if mid_value == target:
+            return True
+        elif mid_value < target:
+            left = mid + 1
+        else:
+            right = mid - 1
+    
+    return False
+'''
+
+'''def searchMatrix(matrix, target):
+    # number of rows
+    m = len(matrix)
+    if m == 0:
+        return False
+    
+    #number of columns
+    n = len(matrix[0])
+
+    left, right = 0, m*n -1
+
+    while left <= right:
+        mid = left + (right-left)//2
+        # how we extract element from the 2D array
+        mid_element = matrix[mid//n] [mid%n]
+        if target == mid_element:
+            return True
+        elif target < mid_element:
+            right = mid - 1
+        else:
+            left = mid+1
+
+    return False
+
+
+#matrix = [[], [], []]
+matrix = [[1, 3, 5, 7], [10, 11, 16, 20], [23, 30, 34, 60]]
+target = 31
+result = searchMatrix(matrix, target)
+print(result)'''
+
+
+
+
+
+
