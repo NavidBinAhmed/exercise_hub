@@ -3388,10 +3388,33 @@ print("index for the target element:", result)
 matrix = [[1, 3, 5, 7], [10, 11, 16, 20], [23, 30, 34, 60]]
 target = 31
 result = searchMatrix(matrix, target)
-print(result)'''
+print(result)
+'''
 
+#Ternary search
+#find the target from the list using ternary search
+def ternarySearch(low, high, target, array):
+    while low <= high:
+        mid1 = low + (high-low)//3
+        mid2 = high - (high - low)//3
 
+        if array[mid1] == target:
+            return mid1
+        elif array[mid2] == target:
+            return mid2
+        elif array[mid1] > target:
+            return ternarySearch(low, mid1-1, target, array)
+        elif array[mid2] < target:
+            return ternarySearch(mid2+1, high, target, array)
+        else: 
+            return ternarySearch(mid1+1, mid2-1, target, array)
+    return -1
 
+given_array = [20, -30, 10, 5, 7, 0, 29, 23, 15, 2, 43, 53, 24, 54]
+array = sorted(given_array)
+target = 0
+low = 0
+high = len(array)-1
 
-
-
+result = ternarySearch(low, high, target, array)
+print("The index of target: ", result)
