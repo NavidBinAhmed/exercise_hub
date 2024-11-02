@@ -3393,7 +3393,9 @@ print(result)
 
 #Ternary search
 #find the target from the list using ternary search
-def ternarySearch(low, high, target, array):
+# Recurrence Relation: T(n) = T(n/3) + c
+# Function definition 
+'''def ternarySearch(low, high, target, array):
     while low <= high:
         mid1 = low + (high-low)//3
         mid2 = high - (high - low)//3
@@ -3410,11 +3412,21 @@ def ternarySearch(low, high, target, array):
             return ternarySearch(mid1+1, mid2-1, target, array)
     return -1
 
+#driver code
 given_array = [20, -30, 10, 5, 7, 0, 29, 23, 15, 2, 43, 53, 24, 54]
 array = sorted(given_array)
 target = 0
 low = 0
 high = len(array)-1
 
+#function calling
 result = ternarySearch(low, high, target, array)
-print("The index of target: ", result)
+print("The index of target: ", result)'''
+
+# find largest number
+
+list_given = [1,2,3,4,57,65]
+
+for elements in list_given:
+    elements = list_given[::-1]
+print(elements)
