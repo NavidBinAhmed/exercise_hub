@@ -3423,7 +3423,7 @@ high = len(array)-1
 result = ternarySearch(low, high, target, array)
 print("The index of target: ", result)'''
 
-# find largest number
+# reverse a number
 '''list_given = [1,2,3,4,57,65]
 
 for elements in list_given:
@@ -3431,8 +3431,8 @@ for elements in list_given:
 print(elements)'''
 
 
-#find specific index
-def findNum(arr, target):
+#find a specific number from a list
+'''def findNum(arr, target):
     numbers = []
 
     for i in arr:
@@ -3443,4 +3443,30 @@ def findNum(arr, target):
 arr = [ 1,2,3,4,5,6]
 target = 6
 result = findNum(arr, target)
-print(result)
+print(result)'''
+
+
+#find the largest number
+
+'''given_list = [1,9,2,3,7,4,5,6]
+
+largest = given_list[0]
+
+for elements in given_list[1:]:
+    if elements > largest:
+        largest = elements
+print(largest)
+'''
+
+
+
+
+
+
+
+
+
+
+
+
+
