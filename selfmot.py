@@ -3447,7 +3447,6 @@ print(result)'''
 
 
 #find the largest number
-
 '''given_list = [1,9,2,3,7,4,5,6]
 
 largest = given_list[0]
@@ -3458,15 +3457,53 @@ for elements in given_list[1:]:
 print(largest)
 '''
 
+#find largest
+'''def find_largest(given_list):
 
+    largest = given_list[0]
 
+    for elements in given_list[1:]:
+        if elements > largest:
+            largest = elements
 
+    return largest
 
+#driver code
+given_list = [1,2,3,8,5,4,7]
+check = find_largest(given_list)
+print("The largest element is ", check)
+'''
 
+#array sorted
+'''given_array = [1,3,1,4,5,3,5,7,5,8,6,4,7,7,3,5,2,4]
 
+check = sorted(given_array)
+print("The sorted array is", check)'''
 
+import time
 
+def measure_time_complexity(func, *args):
+    start_time = time.time()
+    func(*args)
+    end_time = time.time()
+    return end_time - start_time
 
+def example_function(n):
+    # Example: O(n) complexity
+    for i in range(n):
+        pass
 
+if __name__ == "__main__":
+    input_sizes = [100, 1000, 10000, 100000]
+    times = []
 
+    for size in input_sizes:
+        execution_time = measure_time_complexity(example_function, size)
+        times.append(execution_time)
+        print(f"Input size: {size}, Execution time: {execution_time:.6f} seconds")
 
+    # Analyze the time complexity based on input sizes and execution times
+    # Here we assume linear complexity for demonstration
+    for i in range(1, len(times)):
+        ratio = times[i] / times[i - 1]
+        print(f"Ratio for input sizes {input_sizes[i - 1]} and {input_sizes[i]}: {ratio:.2f}")
