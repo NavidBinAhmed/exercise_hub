@@ -3509,11 +3509,9 @@ if __name__ == "__main__":
         ratio = times[i] / times[i - 1]
         print(f"Ratio for input sizes {input_sizes[i - 1]} and {input_sizes[i]}: {ratio:.2f}")'''
 
-
-
 # bubble sort
 # method definition
-def bubbleSort(array):
+'''def bubbleSort(array):
     n = len(array)
     for i in range(n):
         for j in range(0, n-i-1):
@@ -3526,12 +3524,27 @@ def bubbleSort(array):
 array = [70, 20, 50, 30, 90, 5, 15]
 result =bubbleSort(array)
 print("Array after applying bubble sort: ", result)
+'''
+
+# selecttion sort
+#function definisition
+def selectionSort(array):
+    for i in range(len(array)):
+        # to store the index of min element
+        min_index = i
+        for j in range(i+1, len(array)):
+            if array[j] < array[min_index]:
+                min_index = j
+        #swap of the element of i and min_index 
+        array[i], array[min_index] =  array[min_index], array[i]
+    return array
 
 
-
-
-
-
+#Drriver code
+array = [50, 38, 45, 79, 29, 11, 70, 20, 37]
+# function calling
+result = selectionSort(array)
+print("Selection sort of the given array elements is: ", result)
 
 
 
