@@ -3528,7 +3528,7 @@ print("Array after applying bubble sort: ", result)
 
 # selecttion sort
 #function definisition
-def selectionSort(array):
+'''def selectionSort(array):
     for i in range(len(array)):
         # to store the index of min element
         min_index = i
@@ -3545,7 +3545,26 @@ array = [50, 38, 45, 79, 29, 11, 70, 20, 37]
 # function calling
 result = selectionSort(array)
 print("Selection sort of the given array elements is: ", result)
+'''
 
+# insertion sort
+# function definition
+'''def insertionSort(array):
+    for i in range(1, len(array)):
+        key = array[i]
+        j = i-1
 
+        while j >= 0 and key < array[j]:
+            array[j+1] = array[j]
+            j = j-1
 
+        array[j+1] = key
 
+    return array
+
+#driver code
+array = [1, 4, 2, 6, 5, 3, 7]
+#function call
+result = insertionSort(array)
+print("Array after insertion sort is ", result)
+'''
