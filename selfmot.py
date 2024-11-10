@@ -3480,7 +3480,8 @@ print("The largest element is ", check)
 check = sorted(given_array)
 print("The sorted array is", check)'''
 
-import time
+#measure time complexity
+'''import time
 
 def measure_time_complexity(func, *args):
     start_time = time.time()
@@ -3500,10 +3501,38 @@ if __name__ == "__main__":
     for size in input_sizes:
         execution_time = measure_time_complexity(example_function, size)
         times.append(execution_time)
-        print(f"Input size: {size}, Execution time: {execution_time:.6f} seconds")
+         print(f"Input size: {size}, Execution time: {execution_time:.10f} seconds")
 
     # Analyze the time complexity based on input sizes and execution times
     # Here we assume linear complexity for demonstration
     for i in range(1, len(times)):
         ratio = times[i] / times[i - 1]
-        print(f"Ratio for input sizes {input_sizes[i - 1]} and {input_sizes[i]}: {ratio:.2f}")
+        print(f"Ratio for input sizes {input_sizes[i - 1]} and {input_sizes[i]}: {ratio:.2f}")'''
+
+
+
+# bubble sort
+# method definition
+def bubbleSort(array):
+    n = len(array)
+    for i in range(n):
+        for j in range(0, n-i-1):
+            if array[j] > array[j+1]:
+
+                # swap of the elements
+                array[j], array[j+1] = array[j+1], array[j]
+    return array            
+# driver code
+array = [70, 20, 50, 30, 90, 5, 15]
+result =bubbleSort(array)
+print("Array after applying bubble sort: ", result)
+
+
+
+
+
+
+
+
+
+
