@@ -3568,3 +3568,41 @@ array = [1, 4, 2, 6, 5, 3, 7]
 result = insertionSort(array)
 print("Array after insertion sort is ", result)
 '''
+
+'''def largest(array):
+
+    largest_element = array[0]
+
+    for elements in array:
+        if elements > largest_element:
+            largest_element = elements
+
+    return largest_element
+
+
+#driver code
+array = [1,2,4,2,5,7,43,53,2,32,54,22,43,5,23,56,77,32,82,4,6,77,34]
+
+#calling function
+result = largest(array)
+print("The largest element in the given array is", result)'''
+
+
+
+def smallest(array):
+
+    smallest_element = array[0]
+
+    for elements in array:
+        if elements < smallest_element:
+            smallest_element = elements
+
+    return smallest_element
+
+
+#driver code
+array = [1,2,4,2,5,7,43,53,2,32,54,22,43,0,5,23,56,77,32,82,4,6,77,34]
+
+#calling function
+result = smallest(array)
+print("The smallest element in the given array is", result)
