@@ -3609,7 +3609,7 @@ print("The smallest element in the given array is", result)
 '''
 
 
-
+#sort the array- bubble sort
 def sorted_array(array):
     n = len(array)
 
