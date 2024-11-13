@@ -3589,7 +3589,7 @@ print("The largest element in the given array is", result)'''
 
 
 
-def smallest(array):
+'''def smallest(array):
 
     smallest_element = array[0]
 
@@ -3606,3 +3606,21 @@ array = [1,2,4,2,5,7,43,53,2,32,54,22,43,0,5,23,56,77,32,82,4,6,77,34]
 #calling function
 result = smallest(array)
 print("The smallest element in the given array is", result)
+'''
+
+
+
+def sorted_array(array):
+    n = len(array)
+
+    for i in range(n):
+        for j in range(0, n-i-1):
+            if array[j] > array[j+1]:
+                array[j+1], array[j] = array[j], array[j+1]
+
+    return array
+
+#driver code
+array = [11,2,4,2,1,3,5,6,4,6,3,2,6,2,6,7,1]
+result = sorted_array(array)
+print("The sorted array: ", result)
