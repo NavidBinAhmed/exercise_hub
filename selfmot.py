@@ -3608,9 +3608,8 @@ result = smallest(array)
 print("The smallest element in the given array is", result)
 '''
 
-
 #sort the array- bubble sort
-def sorted_array(array):
+'''def sorted_array(array):
     n = len(array)
 
     for i in range(n):
@@ -3624,3 +3623,21 @@ def sorted_array(array):
 array = [11,2,4,2,1,3,5,6,4,6,3,2,6,2,6,7,1]
 result = sorted_array(array)
 print("The sorted array: ", result)
+'''
+
+
+
+def sort_array(array):
+    n = len(array)
+    
+    for i in range(n):
+        for j in range(0, n-i-1):
+            if array[j] > array[j+1]:
+                array[j], array[j+1] = array[j+1], array[j]
+
+    return array            
+            
+#driver code
+array = [3,2,6,3,7,3,8,5,7,4,9,5,8,9,22,4,64,6,43,6,4,55,33]
+result = sort_array(array)
+print("The sorted array:", result)
