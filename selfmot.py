@@ -3625,9 +3625,7 @@ result = sorted_array(array)
 print("The sorted array: ", result)
 '''
 
-
-
-def sort_array(array):
+'''def sort_array(array):
     n = len(array)
     
     for i in range(n):
@@ -3640,4 +3638,17 @@ def sort_array(array):
 #driver code
 array = [3,2,6,3,7,3,8,5,7,4,9,5,8,9,22,4,64,6,43,6,4,55,33]
 result = sort_array(array)
-print("The sorted array:", result)
+print("The sorted array:", result)'''
+
+class Solution:
+    def fibonacci(self, n):
+
+        if n==0: return 0
+        if n==1: return 1
+
+        else: return self.fibonacci(n-2) + self.fibonacci(n-1)
+
+#driver code
+n= 7 #5th fib number
+result = Solution().fibonacci(n)
+print(f"Sum of fib numbers for {n} is {result}.")
