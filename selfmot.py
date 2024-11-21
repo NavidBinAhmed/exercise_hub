@@ -3640,7 +3640,8 @@ array = [3,2,6,3,7,3,8,5,7,4,9,5,8,9,22,4,64,6,43,6,4,55,33]
 result = sort_array(array)
 print("The sorted array:", result)'''
 
-class Solution:
+#sum of fibonacci numner
+'''class Solution:
     def fibonacci(self, n):
 
         if n==0: return 0
@@ -3651,4 +3652,7 @@ class Solution:
 #driver code
 n= 7 #5th fib number
 result = Solution().fibonacci(n)
-print(f"Sum of fib numbers for {n} is {result}.")
+print(f"Sum of fib numbers for {n} is {result}.")'''
+
+
+print(4**3)
