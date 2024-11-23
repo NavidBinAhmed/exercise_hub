@@ -3655,4 +3655,18 @@ result = Solution().fibonacci(n)
 print(f"Sum of fib numbers for {n} is {result}.")'''
 
 
-print(4**3)
+#print(4**3)
+
+def largest_element(array):
+    largest = array[0]
+
+    for elements in array:
+        if elements > largest:
+            largest = elements
+
+    return largest 
+
+#driver code
+array = [2,4,3,1,6,4,1,8,5,2,10,5,7,4,7,2,9,2,2,5]
+check = largest_element(array)
+print("The largest element is", check)
