@@ -3657,7 +3657,7 @@ print(f"Sum of fib numbers for {n} is {result}.")'''
 
 #print(4**3)
 
-def largest_element(array):
+'''def largest_element(array):
     largest = array[0]
 
     for elements in array:
@@ -3669,4 +3669,21 @@ def largest_element(array):
 #driver code
 array = [2,4,3,1,6,4,1,8,5,2,10,5,7,4,7,2,9,2,2,5]
 check = largest_element(array)
-print("The largest element is", check)
+print("The largest element is", check)'''
+
+
+from collections import Counter
+import heapq
+
+def topFrequentElement(array, k):
+    if k == len(array):
+        return set(array)
+    
+    count = Counter(array)
+    print(count)
+    return heapq.nlargest(k, count.keys())
+
+array = [1,3,2,4,2,6,4,3,6,4,3,6,4]
+k = 2
+check = topFrequentElement(array, k)
+print("The top frequent element in the array is", check)
