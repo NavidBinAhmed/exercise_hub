@@ -3671,7 +3671,7 @@ array = [2,4,3,1,6,4,1,8,5,2,10,5,7,4,7,2,9,2,2,5]
 check = largest_element(array)
 print("The largest element is", check)'''
 
-
+#Top k frequent elements
 '''from collections import Counter
 import heapq
 
@@ -3687,3 +3687,26 @@ array = [1,3,2,4,2,6,4,3,6,4,3,6,4]
 k = 2
 check = topFrequentElement(array, k)
 print("The top frequent element in the array is", check)'''
+
+#Top k frequent elements
+#function definition
+from collections import Counter
+import heapq
+
+def topKFrequentElement(array, k):
+    if k == len(array):
+        return set(array)
+    
+    count = Counter(array)
+    #count is dictionary which contains unuque value as the key
+    #and the frequency of those unique elements as the values
+    print(count)
+    return heapq.nlargest(k, count.keys(), key=count.get)
+
+
+##Driver code
+array = [1,3,5,3,5,6,4,5,3,5,6,3,5,6,4,3,5]
+k=3
+#function calling
+result = topKFrequentElement(array, k)
+print("The top", k, "frequent elements are", result)
