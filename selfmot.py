@@ -3690,7 +3690,7 @@ print("The top frequent element in the array is", check)'''
 
 #Top k frequent elements
 #function definition
-from collections import Counter
+'''from collections import Counter
 import heapq
 
 def topKFrequentElement(array, k):
@@ -3709,4 +3709,40 @@ array = [1,3,5,3,5,6,4,5,3,5,6,3,5,6,4,3,5]
 k=3
 #function calling
 result = topKFrequentElement(array, k)
-print("The top", k, "frequent elements are", result)
+print("The top", k, "frequent elements are", result)'''
+
+
+
+
+
+# K closet elements
+from heapq import heappush, heappop
+import math
+#function definition
+
+# get_dist is to give the Euclidean distance from the origin 
+def get_dist(x,y):
+    return math.sqrt(x**2 + y**2)
+
+def KClosest(points, k):
+    min_heap= []
+    n = len(points)
+    for i in range(n):
+        x = points[i][0]
+        y = points[i][0]
+
+        # to insert the elements inside the minheap
+        heappush(min_heap, (get_dist(x,y), points[i]))
+
+    result = []
+    for i in range(k):
+        # te delete the elements from the minheap
+        result.append(heappop(min_heap)[1])
+    return result
+
+# driver code
+points = [[3,3], [5,-1], [-2,4]]
+k = 2
+# function calling
+result = KClosest(points, k)
+print(k, "closest points to the origin are", result)
