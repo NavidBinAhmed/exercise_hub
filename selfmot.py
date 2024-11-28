@@ -3672,7 +3672,7 @@ check = largest_element(array)
 print("The largest element is", check)'''
 
 
-from collections import Counter
+'''from collections import Counter
 import heapq
 
 def topFrequentElement(array, k):
@@ -3686,4 +3686,4 @@ def topFrequentElement(array, k):
 array = [1,3,2,4,2,6,4,3,6,4,3,6,4]
 k = 2
 check = topFrequentElement(array, k)
-print("The top frequent element in the array is", check)
+print("The top frequent element in the array is", check)'''
