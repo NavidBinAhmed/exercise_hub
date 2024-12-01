@@ -3752,17 +3752,27 @@ print(k, "closest points to the origin are", result)
 '''def findMaxProfit(prices):
     min_price = float('inf')
     max_profit = 0
-
     for i in range(len(prices)):
         if prices[i] < min_price:
             min_price = prices[i]
-
         elif prices[i] - min_price > max_profit:
             max_profit = prices[i] - min_price
-
     return max_profit
-
 # driver code
 prices = [2,3,4,2,4,5,6,7,10,14,16,20]
 result = findMaxProfit(prices)
 print("The maximum profit of buy and sell stock is", result)'''
+
+def findMaxProfit(prices):
+    min_price = float('inf')
+    max_profit = 0
+    for i in range(len(prices)):
+        if prices[i] < min_price:
+            min_price = prices[i]
+        elif prices[i] - min_price > max_profit:
+            max_profit = prices[i] - min_price
+    return max_profit
+#driver code
+prices = [4,2,7,5,13]
+result = findMaxProfit(prices)
+print("The max profit of buy and sell stock is", result)
