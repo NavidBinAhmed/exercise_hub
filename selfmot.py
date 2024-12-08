@@ -3777,15 +3777,15 @@ prices = [4,2,7,5,13]
 result = findMaxProfit(prices)
 print("The max profit of buy and sell stock is", result)'''
 
+# nested conditional to check leap years
+'''year = int(input("Enter a year: "))
 
-
-
-
-
-
-
-
-
-
-
-
+if year>0:
+    print("This is a valid year")
+    if year%4==0:
+        print("& this is leap year.")
+    else:
+        print("& not a leap year.")
+else:
+    print("Please enter a valid year.")
+'''
