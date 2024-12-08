@@ -3763,7 +3763,7 @@ prices = [2,3,4,2,4,5,6,7,10,14,16,20]
 result = findMaxProfit(prices)
 print("The maximum profit of buy and sell stock is", result)'''
 
-def findMaxProfit(prices):
+'''def findMaxProfit(prices):
     min_price = float('inf')
     max_profit = 0
     for i in range(len(prices)):
@@ -3775,6 +3775,17 @@ def findMaxProfit(prices):
 #driver code
 prices = [4,2,7,5,13]
 result = findMaxProfit(prices)
-print("The max profit of buy and sell stock is", result)
+print("The max profit of buy and sell stock is", result)'''
 
-#1-Dec
+
+
+
+
+
+
+
+
+
+
+
+
