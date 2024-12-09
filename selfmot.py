@@ -3805,3 +3805,44 @@ elif opt == '/':
     print(num1/num2)
 else:
     print(num1**num2)'''
+
+
+#Finding maxima and minima in array using divide and conquer rule
+def minandmax(arr, i, j):
+    if i == j:        # single element in array
+        min = max = arr[i]
+
+    elif i == j-1:    # two elements in array
+        if arr[i] < arr[j]:
+            min = arr[i]
+            max = arr[j]
+        else:
+            min = arr[j]
+            max = arr[i]
+
+    else:
+        mid = i + (j-i)//2
+
+        maxL, minL = minandmax(arr, i, mid)
+        maxR, minR = minandmax(arr, mid+1, j)
+
+        if maxL < maxR:
+            max = maxR
+        else:
+            max = maxL
+
+        if minL < minR:
+            min = minL
+        else:
+            min = minR
+
+        
+    return (max, min)
+
+# driver code
+arr = [12,34,5,7,6,19,4,26,22,14]
+i = 1
+j = len(arr) -1
+max, min = minandmax(arr, i, j)
+print("The maxima and minima in the array is", max, "and", min, "respectively.")
+     
