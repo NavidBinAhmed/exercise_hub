@@ -3837,7 +3837,7 @@ def minandmax(arr, i, j):
             min = minR
 
         
-    return (max, min)
+    return max, min
 
 # driver code
 arr = [12,34,5,7,6,19,4,26,22,14]
@@ -3845,4 +3845,3 @@ i = 1
 j = len(arr) -1
 max, min = minandmax(arr, i, j)
 print("The maxima and minima in the array is", max, "and", min, "respectively.")
-     
