@@ -3789,3 +3789,19 @@ if year>0:
 else:
     print("Please enter a valid year.")
 '''
+
+# simple calculator
+'''num1 = int(input("Enter a number: "))
+num2 = int(input("Enter another number: "))
+opt = input("Enter operator: ")
+
+if opt == '+':
+    print(num1+num2)
+elif opt == '-':
+    print(num1-num2)
+elif opt == '*':
+    print(num1*num2)
+elif opt == '/':
+    print(num1/num2)
+else:
+    print(num1**num2)'''
