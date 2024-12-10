@@ -3807,8 +3807,26 @@ else:
     print(num1**num2)'''
 
 
+#max profit
+# function definition
+'''def findMaxProfit(prices):
+    min_price = float('inf')
+    max_profit = 0
+
+    for i in range(len(prices)):
+        if prices[i] < min_price:
+            min_price = prices[i]
+        elif prices[i] - min_price > max_profit:
+            max_profit = prices[i] - min_price
+    return max_profit
+
+# driver code
+prices = [7, 2, 8,3,1,9,10]
+result = findMaxProfit(prices)
+print("The maximum profit of buy and sell stock is", result)'''
+
 #Finding maxima and minima in array using divide and conquer rule
-def minandmax(arr, i, j):
+'''def minandmax(arr, i, j):
     if i == j:        # single element in array
         min = max = arr[i]
 
@@ -3836,7 +3854,6 @@ def minandmax(arr, i, j):
         else:
             min = minR
 
-        
     return max, min
 
 # driver code
@@ -3844,4 +3861,22 @@ arr = [12,34,5,7,6,19,4,26,22,14]
 i = 1
 j = len(arr) -1
 max, min = minandmax(arr, i, j)
-print("The maxima and minima in the array is", max, "and", min, "respectively.")
+print("The maxima and minima in the array is", max, "and", min, "respectively.")     
+'''
+
+# find the prime number
+'''for num in range(0, 101):
+    if num>1:
+        for i in range(2, num):
+            if num%i==0:
+                break
+        else:
+            print(num)'''
+
+for num in range(0,10):
+    if num>1:
+        for i in range(2,num):
+            if num%i==0:
+                break
+        else:
+            print(num)
