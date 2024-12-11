@@ -3924,3 +3924,25 @@ print(element)
 
 element = nested_list[1][2]
 print(element)'''
+
+# dictionaries
+
+student = { 'name': "Sakin", "location": "Gazipur", "Company": "IAI"}
+print(student['name'])
+print(student['Company'])
+
+print(student.get('name'))
+print(student.get('Company'))
+print(student.get('Age', "age not shared"))
+
+print(student)
+
+# iterating over keys and values
+for keys in student.keys():
+    print(keys)
+
+for values in student.values():
+    print(values)
+
+for key, value in student.items():
+    print(f"{key}: {value}")
