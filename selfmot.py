@@ -3915,3 +3915,12 @@ print(tpl)
 
 a,b,c,d,e = tpl
 print(d)'''
+
+# nested list
+'''nested_list = [[1,2,3,4], [5,6,7], ['a', 3.14, "hello"]]
+
+element = nested_list[2][0]
+print(element)
+
+element = nested_list[1][2]
+print(element)'''
