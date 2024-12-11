@@ -3873,10 +3873,45 @@ print("The maxima and minima in the array is", max, "and", min, "respectively.")
         else:
             print(num)'''
 
-for num in range(0,10):
+# prime number
+'''for num in range(0,10):
     if num>1:
         for i in range(2,num):
             if num%i==0:
                 break
         else:
             print(num)
+'''
+
+# creating a tuple
+'''empty_tuple = ()
+print(type(empty_tuple))
+'''
+
+'''tpl = tuple()
+print(type(tpl))'''
+
+'''list = [12,3,2,4,3,5,3]
+tpl = tuple(list)
+print(tpl)
+print(type(list))
+print(type(tpl))'''
+
+
+
+'''numbers = (1,2,3,4,5)
+mixed_tpl = (10,22,34, "hello", 3.14)
+
+concetanation_tuple = numbers + mixed_tpl
+print(concetanation_tuple)
+
+print(mixed_tpl * 3)
+
+print(numbers.index(5))'''
+
+
+'''tpl = 1,2,4,"hello",1.20
+print(tpl)
+
+a,b,c,d,e = tpl
+print(d)'''
