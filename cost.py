@@ -24,7 +24,7 @@ print('$',total_cost)'''
 
 '''The following function will calculate the total cost of the cart'''
 # function definition
-'''def total_cost_calculator(cart):
+def total_cost_calculator(cart):
     total_cost = 0
 
     for items in cart:
@@ -46,9 +46,4 @@ cart = [
 cost = total_cost_calculator(cart)
 print("The total cost is US$", cost)
 
-# output: The total cost is US$ 225'''
-
-
-
-
-
+# output: The total cost is US$ 225
