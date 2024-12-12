@@ -3925,9 +3925,11 @@ print(element)
 element = nested_list[1][2]
 print(element)'''
 
+
+
 # dictionaries
 
-student = { 'name': "Sakin", "location": "Gazipur", "Company": "IAI"}
+'''student = { 'name': "Sakin", "location": "Gazipur", "Company": "IAI"}
 print(student['name'])
 print(student['Company'])
 
@@ -3945,4 +3947,143 @@ for values in student.values():
     print(values)
 
 for key, value in student.items():
-    print(f"{key}: {value}")
+    print(f"{key}: {value}")'''
+
+
+
+# frequency counter
+'''numbers = [1,2,2,3,3,3,4,4,4,4,5,5]
+
+frequency = {}
+
+for elements in numbers:
+    if elements in frequency:
+        frequency[elements] += 1
+    else:
+        frequency[elements] = 1
+
+print(frequency)
+'''
+
+#frequency counter
+'''numbers = [1,2,2,3,3,4,4,4,5,5,6,5,7]
+
+freq = {}
+
+for elements in numbers:
+    if elements in freq:
+        freq[elements] += 1
+    else:
+        freq[elements] = 1
+
+print(freq)'''
+
+
+# To-Do List
+'''to_do_list = ["Buy groceries", "Clean house", "Pay bills"]
+
+# adding to task
+to_do_list.append("Schedule meeting")
+to_do_list.append("Go for walk")
+
+
+# removing a completed task
+
+to_do_list.remove("Clean house")
+
+# Checking if a task is in the list
+
+if "Pay bills" in to_do_list:
+    print("Don't forget to pay the internet bill.")
+
+
+print("To do list remaining:")
+for task in to_do_list:
+    print(f"-{task}")'''
+
+
+# student grade
+'''# organizing student grades
+marks = [85, 92, 78, 90, 88]
+
+#adding a new grade
+marks.append(95)
+
+# average marks
+average_mark = sum(marks)/len(marks)
+print(f"Average marks: {average_mark:.2f}")
+
+# Finding highest and lowest marks
+highest_mark = max(marks)
+lowest_mark = min(marks)
+
+print(f"Highest mark: {highest_mark}")
+print(f"Lowest mark: {lowest_mark}")'''
+
+
+# management of an invertory, for ex- in an ecommerce site
+'''# managing an inventory
+inventory = ["apples", "bananas", "oranges", "grapes"]
+
+# adding an item
+inventory.append("strawberries")
+
+# removing item that is out of stock
+inventory.remove("oranges")
+
+#checking if an item is in stock
+item = "grapes"
+if item in inventory:
+    print(f"{item} are in stock.")
+else:
+    print(f"{item} are out of stock.")
+
+
+# printing the inventory
+print("Inventory List: ")
+for item in inventory:
+    print(f"- {item}")'''
+
+
+# user feedback analysis
+'''# collecting feedback
+feedback = ["Great service!", "Very satisfied", "Could be better", "Excellent experience"]
+
+# adding new feedback
+feedback.append("Not happy with the service.")
+
+# Counting specific feedback
+positive_feedback_count = sum(1 for comment in feedback if "great" in comment.lower() or "excellent" in comment.lower() or "satisfied" in comment.lower())
+print(f"Positive Feedback Count: {positive_feedback_count}")
+
+
+# Printing all feedback
+print("User Feedbacks:")
+for comment in feedback:
+    print(f"- {comment}")'''
+
+# syntax of function
+'''def name(parameters):
+    """docstring"""
+    # function body
+    return parameters
+
+print(name(12))
+
+
+num = 24
+if num%2==0:
+    print("number is even.")
+else:
+    print("number is odd.")
+
+
+def even_or_odd(num):
+    """this function finds if a number is even or odd"""
+    if num%2==0:
+        print("Number is even.")
+    else:
+        print("Number is odd")
+
+even_or_odd(13)
+even_or_odd(16)'''
