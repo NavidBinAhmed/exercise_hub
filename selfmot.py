@@ -4322,3 +4322,66 @@ number = 5
 # function calling
 result = factorial(number)
 print(f"Factorial of {number} is {result}.")'''
+
+
+# reading a file 'sample.txt'
+'''sample.txt --->
+Hello Navid!
+How are you doing?
+
+Are you doing good?
+'''
+'''def count_word_frequency(file_path):
+    count_word = {}
+
+    with open(file_path, 'r') as file:
+        for line in file:
+            words = line.split()
+            for word in words:
+                word = word.lower().strip('.,!?;:\'')
+                count_word[word] = count_word.get(word,0) + 1
+
+    return count_word
+
+filepath = 'sample.txt'
+word_frequency = count_word_frequency(filepath)
+print(word_frequency)'''
+
+# validation of email address
+'''def validation_email(email):
+    
+    for char in email:
+        if char=='@' and 'com' and '.':
+            return True    
+    return False
+
+email= 'navid_123@yahoo.com'
+result = validation_email(email)    
+print(result)'''
+
+# validate email using indexes of @ and .
+'''def validate_email(email):
+    # Check for both '@' and '.' in the email
+    if '@' in email and '.' in email:
+        # Ensure '@' comes before '.'
+        if email.index('@') < email.rindex('.'):
+            return True
+    return False
+
+# Example email
+email = 'navid_ahmed_123@yahoo.com'
+result = validate_email(email)    
+print(result)'''
+
+# validate email using indexes of @ and .
+'''def validate_email(email):
+    if '@' in email and '.' in email:
+        if email.index('@') < email.index('.'):
+            return True
+    return False
+
+email = 'navid@yahoo.com'
+result = validate_email(email)
+print(result)
+
+# Output: True'''
