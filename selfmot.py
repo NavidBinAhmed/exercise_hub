@@ -4481,4 +4481,20 @@ print(result)
 
 output: [('Navid', 32), ('Sakin', 33)]'''
 
-# filter - lambda function to make a list of squares
+# filter- function to return a list of elements by filtering from a list
+'''def even(num):
+    if num%2==0:
+        return True
+    
+result = even(24)
+print(result)
+
+lst = [1,2,3,4,5,6,7,8,9,10]
+flt = list(filter(even, lst))
+print(flt)
+'''
+
+# filter with lambda function
+'''numbers = [1,2,3,4,5,6,7]
+greater = list(filter(lambda x:x>5, numbers))
+print(greater)'''
