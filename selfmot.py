@@ -4087,3 +4087,81 @@ def even_or_odd(num):
 
 even_or_odd(13)
 even_or_odd(16)'''
+
+'''def addition(a,b,c):
+    return a+b+c
+
+print(addition(2,3,4))
+print(addition(1,2,4))'''
+
+'''def greet(name):
+    print(f"Hello {name}, welcome!")
+
+greet("Navid")
+'''
+
+# default parameter
+'''def greet(name="Guest"):
+    print(f"Hello {name}, welcome!")
+
+greet()
+'''
+
+# positional arguments- we do not know how many parameters are
+# going to be taken into consideration as code progresses
+'''def LLMParameters(*par):
+    for params in par:
+        print(params)
+
+LLMParameters(1,2,3,4,5,6,"Navid")'''
+
+#example
+'''def psargs(*pwgs):
+    for parameters in pwgs:
+        print(parameters)
+
+psargs(1,2,3,4,5,6,7,8,"Sakin")
+'''
+
+# keyword arguments: ** kwargs
+# returns as pair: key, value
+'''def details_arguments(**kwargs):
+    for key,value in kwargs.items():
+        print(f"{key}: {value}")
+
+details_arguments(name ="Navid", age=32, country ="Bangladesh")'''
+
+# positional arguments-can return multiple and uncountable parameters
+# keyword arguments-returns as key-value pairs, multiple 
+
+
+# positional arguments
+'''def print_positional_arguments(*parameters):
+    for items in parameters:
+        print(items)
+print_positional_arguments(1,2,3,4,5,"Navid")'''
+
+# keyword arguments
+'''def keyword_arguments(**kwargs):
+    for key, value in kwargs.items():
+        print(f"{key}: {value}")
+keyword_arguments(name = "navid", age=32, origin ="Bangladesh")'''
+
+# combining positional and keyword arguments
+'''def print_args(*args, **kwargs):
+    for val in args:
+        print(f"positional arguments: {val}")
+ 
+    for key, value in kwargs.items():  
+        print(f"{key}: {value}")
+
+print_args(12,34,"Navid", name="Sakin", age=32, origin="Bangladesh")'''
+
+
+# Return Statement
+# Return multiple parameters
+'''def multiply(a,b):
+    return a*b,a,b
+
+result = multiply(2,3)
+print(result)'''
