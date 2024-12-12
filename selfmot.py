@@ -4419,3 +4419,66 @@ Output:
 True
 False
 True'''
+
+'''def square(num):
+    return num**2
+
+check = square(4)
+print(check)'''
+
+'''num = [ 1,2,3,4,5]
+square = []
+for nums in num:
+    square.append(nums**2)
+    #square = nums
+
+print(square)'''
+
+# map - lambda function to make a list of squares 
+'''numbers = [1,2,3,4,5,6,7, 88, 13]
+squares = list(map(lambda x: x**2, numbers))
+print(squares)
+
+output: [1, 4, 9, 16, 25, 36, 49, 7744, 169]'''
+
+
+# use of map - lambda function
+'''def square(x):
+    return x*x
+
+numbers = [1,2,3,4,5,6,7, 8, 13]
+print(map(square, numbers))
+print(list(map(square, numbers)))
+
+output:
+<map object at 0x0000014C35A53FA0>
+[1, 4, 9, 16, 25, 36, 49, 64, 169]'''
+
+
+'''def get_name(person):
+    return person['name']
+
+people = [
+    {'name': 'Navid', 'age': 32},
+    {'name': 'Sakin', 'age': 33}
+]
+
+result = list(map(get_name, people))
+print(result)
+
+output: ['Navid', 'Sakin']
+
+def get_name(person):
+    return person['name'], person['age']
+
+people = [
+    {'name': 'Navid', 'age': 32},
+    {'name': 'Sakin', 'age': 33}
+]
+
+result = list(map(get_name, people))
+print(result)
+
+output: [('Navid', 32), ('Sakin', 33)]'''
+
+# filter - lambda function to make a list of squares
