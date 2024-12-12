@@ -1,5 +1,5 @@
 def is_strong_pass(password):
-    '''checks if password is strong or weak'''
+    '''checks if a given password is strong or weak'''
 
     if len(password) < 8:
         return False
