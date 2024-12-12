@@ -4165,3 +4165,160 @@ print_args(12,34,"Navid", name="Sakin", age=32, origin="Bangladesh")'''
 
 result = multiply(2,3)
 print(result)'''
+
+
+# Some projects on functions
+'''Temperature Converter'''
+'''def convert_temp(temp, unit):
+    #this function converts temperature from Celcius to Farenheit
+    if unit=='C':
+        return temp* 9/5 + 32 ## C to F
+    elif unit=='F':
+        return (temp-32)*5/9 ## F to C
+    else:
+        return None
+    
+print(convert_temp(25, 'C'), "F")
+print(convert_temp(77, 'F'), "C")'''
+
+'''output:
+77.0 F
+25.0 C'''
+
+
+'''Password Checker'''
+'''def is_strong_pass(password):
+    #checks if a given password is strong or weak
+
+    if len(password) < 8:
+        return False
+    if not any(char.isdigit() for char in password):
+        return False
+    if not any(char.islower() for char in password):
+        return False
+    if not any(char.isupper() for char in password):
+        return False
+    if not any(char in '!@#$%^&*()_+' for char in password):
+        return False
+    return True
+
+## calling function
+password_1 = 'WeakPwd'
+result_1 = is_strong_pass(password_1)
+print(result_1) # output: False
+
+password_2 = 'WeakPwd1_^'
+result_2 = is_strong_pass(password_2)
+print(result_2) # output: True'''
+
+
+'''Total cost calculator for given cart'''
+'''# function definition
+
+def total_cost_calculator(cart):
+    total_cost = 0
+
+    for item in cart:
+        total_cost += item['price'] * item['quantity']
+    
+    return total_cost
+
+
+# stored carts: driver code
+cart = [
+    {'name': 'Apple', 'price': 0.5, 'quantity': 4},
+    {'name': 'Banana', 'price': 0.3, 'quantity': 8},
+    {'name': 'Orange', 'price': 0.6, 'quantity': 10}
+]
+
+# function calling
+total_cost = total_cost_calculator(cart)
+print('$',total_cost)'''
+
+
+
+'''The following function will calculate the total cost of the cart'''
+# function definition
+'''def total_cost_calculator(cart):
+    total_cost = 0
+
+    for items in cart:
+        total_cost = items['price'] * items['quantity']
+    return total_cost
+
+
+# example cart: driver code
+cart = [
+    {'name':'Apple', 'price': 5, 'quantity': 5},
+    {'name':'Orange', 'price': 7, 'quantity': 4},
+    {'name':'Banana', 'price': 6, 'quantity': 15},
+    {'name':'Guava', 'price': 5, 'quantity': 10},
+    {'name':'Grape', 'price': 9, 'quantity': 25}
+]
+
+
+# function calling
+cost = total_cost_calculator(cart)
+print("The total cost is US$", cost)
+
+# output: The total cost is US$ 225'''
+
+# check if a string is pallindrome
+'''# function definition
+def check_pallindrome(string):
+    string = string.lower().replace(" ","")
+    return string==string[::-1]
+
+# driver code
+string = "A man a plan a canal panama"
+# function calling
+result = check_pallindrome(string)
+print(result)
+
+# driver code
+string_2 = "madam"
+# function calling
+result_2 = check_pallindrome(string_2)
+print(result_2)
+
+# driver code
+string_3 = "Hi Navid"
+# function calling
+result_3 = check_pallindrome(string_3)
+print(result_3)'''
+
+
+
+# Calculate factorial
+
+# function definition
+'''def factorial(n):
+    if n==0:
+        return 1
+    else:
+        return n * factorial(n-1)
+
+# driver code
+n = 6
+result = factorial(n)
+print("Factorial of", n, "is", result)
+print(f"Factorial of {n} is {result}....")
+
+output: 
+Factorial of 6 is 720
+Factorial of 6 is 720....
+'''
+
+'''# function definition
+def factorial(number):
+    if number == 0:
+        return 1
+    else:
+        return number * factorial(number-1)
+
+# driver code
+number = 5
+
+# function calling
+result = factorial(number)
+print(f"Factorial of {number} is {result}.")'''
