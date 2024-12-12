@@ -4385,3 +4385,37 @@ result = validate_email(email)
 print(result)
 
 # Output: True'''
+
+# Lambda Function
+# variable = lambda arguments: expression 
+'''expression = lambda a,b,c : a+b-c
+print(expression(5,5,2))
+
+# function calling
+result = expression(4,4,2)
+print(result)
+
+# driver code
+a,b,c = 2,2,1
+result = expression(a,b,c)
+print(result)'''
+
+# conventional vs lambda function
+'''
+def even(num):
+
+    if num%2==0:
+        return True
+
+num = 24 
+result = even(num)  
+print(result)
+
+even = lambda a:a%2==0
+print(even(23))
+print(even(22))
+
+Output:
+True
+False
+True'''
