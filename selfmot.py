@@ -4522,6 +4522,47 @@ arr = [3,5,6,3,2,10,5,7,1,8,4,8,9]
 result = lowest(arr)
 print(f"Lowest number in the given array is {result}")'''
 
-print(4294967296*4294967296)
 
-# 18446744073709551616
+# finding the value of 2 to the power 64 (a^n = 2^64)
+'''print(4294967296*4294967296)'''
+
+# output - 18446744073709551616
+
+'''def findPower(a,n):
+    if n==1:
+        return a
+    else:
+        mid = n//2
+        b = findPower(a, mid)
+        result = b*b
+        if n%2==0:
+            return result
+        else:
+            return result * a 
+        
+a = 2
+n = 64
+result = findPower(a,n)
+print(f"The value of {a} to the power {n} is {result}")'''
+
+
+
+'''def findpower(a,n):
+    if n==1:
+        return a
+    elif n==0:
+        return 1
+    else:
+        mid = n//2
+        b = findpower(a, mid)
+        result = b*b
+        if n%2==0: #even n
+            return result
+        else:
+            return result * a # odd n 
+
+# driver code
+a = 6
+n = 2
+result = findpower(a,n)
+print(f"The result of the given expression: {result}")'''
