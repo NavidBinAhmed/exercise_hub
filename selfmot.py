@@ -4498,3 +4498,14 @@ print(flt)
 '''numbers = [1,2,3,4,5,6,7]
 greater = list(filter(lambda x:x>5, numbers))
 print(greater)'''
+
+'''def largest(arr):
+    num = 0
+    for elements in arr:
+        if elements > num:
+            num = elements
+    return num
+
+arr = [3,5,6,3,2,10,5,7,8,4,8,9]
+result = largest(arr)
+print(f"Largest number in the given array is {result}")'''
