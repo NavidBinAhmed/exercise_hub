@@ -4521,3 +4521,7 @@ print(f"Largest number in the given array is {result}")'''
 arr = [3,5,6,3,2,10,5,7,1,8,4,8,9]
 result = lowest(arr)
 print(f"Lowest number in the given array is {result}")'''
+
+print(4294967296*4294967296)
+
+# 18446744073709551616
