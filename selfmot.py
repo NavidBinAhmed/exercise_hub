@@ -4499,6 +4499,7 @@ print(flt)
 greater = list(filter(lambda x:x>5, numbers))
 print(greater)'''
 
+# largest element in an array
 '''def largest(arr):
     num = 0
     for elements in arr:
@@ -4509,3 +4510,14 @@ print(greater)'''
 arr = [3,5,6,3,2,10,5,7,8,4,8,9]
 result = largest(arr)
 print(f"Largest number in the given array is {result}")'''
+
+'''def lowest(arr):
+    num = float('inf')
+    for elements in arr:
+        if elements < num:
+            num = elements
+    return num
+
+arr = [3,5,6,3,2,10,5,7,1,8,4,8,9]
+result = lowest(arr)
+print(f"Lowest number in the given array is {result}")'''
