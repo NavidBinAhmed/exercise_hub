@@ -94,3 +94,26 @@ def reverse_list(nums):
 nums = [1,2,3,4,5,6,7]
 result = reverse_list(nums)
 print("The reversed list using 2P:", result)
+
+'''repeat two pointers'''
+def reverse_list_2p(arr):
+    left, right = 0, len(arr) - 1
+
+    while left < right:
+        arr[left], arr[right] = arr[right], arr[left]
+        left += 1
+        right -= 1
+    return arr
+
+# driver code
+arr = [1,2,3,4,5,6,7,8]
+result = reverse_list_2p(arr)
+print("Reversed using 2p:", result)
+
+# time complexity: O(n)
+# space complexity: O(1)
+
+
+
+
+
