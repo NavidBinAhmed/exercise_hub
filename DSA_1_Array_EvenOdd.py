@@ -49,7 +49,7 @@ def even_odd_segregated(arr):
             ans_list.append(arr[i])
 
     for j in range(len(arr)):
-        if arr[j]%2 != 0:
+        if arr[j]%2 == 1:
             ans_list.append(arr[j])
     
     return ans_list
