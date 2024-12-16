@@ -79,11 +79,13 @@ result= even_odd(arr)
 print(result)
 
 
+'''repeat'''
 def even_odd(arr):
     n = len(arr)
     i = -1
     j = 0
     while j<n:
+    #while j<n:
         if arr[j]%2==0:
             i=i+1
             arr[i], arr[j] = arr[j], arr[i]
@@ -96,5 +98,5 @@ arr = [1,2,3,4,5,6,7,8]
 result = even_odd(arr)
 print(f"The even-odd separated list: {result}") 
 
-
-
+# Time Complexity: O(n)
+# Space Complexity: O(1) '''no extra space for an additional initialized list'''
