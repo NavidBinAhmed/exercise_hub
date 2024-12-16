@@ -37,7 +37,8 @@ print(operation_5)
 
 operation_6 = list[5::-1]
 print(operation_6)
-
+# Time complexity = big O of n = O(n)
+# Space complexity = big O of 1 = O(1) - no extra space taken
 
 
 # approach 2: negative indexing in function for reversal of an array
@@ -45,6 +46,7 @@ print(operation_6)
 
 def reverse_list(array):
     # initialization of empty reversed list
+    # as a list of n elements as extra space
     reversed_list = []
 
     # logic building
@@ -60,6 +62,7 @@ print(f"Reversal of the array: {result}")
 
 '''repeat'''
 def reversal(arr):
+    # as a list of n elements - extra space
     reversed_list_init = []
 
     for index in range(1, len(arr) + 1):
@@ -70,13 +73,24 @@ arr = [1,2,3,4,5,6]
 result = reversal(arr)
 print(f"Reversed: {result}")
 
+# Time complexity = big O of n = O(n)
+# Space complexity = big O of n = O(n ) - extra space of implement
 
 
 
+# approach 3: two pointers for reversal of array
+def reverse_list(nums):
+    left, right = 0, len(nums) - 1
+    
+    while left < right:
+        # Swap the elements at the left and right pointers
+        nums[left], nums[right] = nums[right], nums[left]
+        # Move the pointers towards the center
+        left += 1
+        right -= 1
+    
+    return nums
 
-
-
-
-
-
-
+nums = [1,2,3,4,5,6,7]
+result = reverse_list(nums)
+print("The reversed list using 2P:", result)
