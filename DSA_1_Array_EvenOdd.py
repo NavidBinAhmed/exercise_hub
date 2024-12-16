@@ -2,7 +2,7 @@
 
 # approach 1: partition array
 
-def even_odd(arr):
+'''def even_odd(arr):
     ans_list = []
     
     for numbers in range(len(arr)):
@@ -22,7 +22,7 @@ print(f"The segregated even odd numbers: {result}")
 # space = O(n)
 
 
-'''repeat'''
+#repeat
 def even_odd(arr):
     ans_list = []
 
@@ -39,7 +39,7 @@ arr = [1,2,3,4,5,6,7]
 result = even_odd(arr)
 print(f"The segregated even odd: {result}")
 
-'''repeat'''
+# repeat
 def even_odd_segregated(arr):
 
     ans_list = []
@@ -57,4 +57,44 @@ def even_odd_segregated(arr):
 # driver code
 arr = [1,2,3,4,5,6,7,8,0]
 result = even_odd_segregated(arr)
-print(f"The segregated list: {result}")
+print(f"The segregated list: {result}")'''
+
+
+# approach 2: two-pointer appraoch
+def even_odd(arr):
+    n = len(arr)
+    i = -1
+    j = 0
+    
+    while j<n:
+        if arr[j]%2==0:
+            i = i+1
+            arr[i], arr[j] = arr[j], arr[i]
+        else: 
+            j = j+1 # Move to the next element regardless of even or odd
+    return arr
+
+arr = [1,2,3,4,5,6,7,8]
+result= even_odd(arr)
+print(result)
+
+
+def even_odd(arr):
+    n = len(arr)
+    i = -1
+    j = 0
+    while j<n:
+        if arr[j]%2==0:
+            i=i+1
+            arr[i], arr[j] = arr[j], arr[i]
+        else:
+            j = j+1
+    return arr
+
+# driver code 
+arr = [1,2,3,4,5,6,7,8]
+result = even_odd(arr)
+print(f"The even-odd separated list: {result}") 
+
+
+
