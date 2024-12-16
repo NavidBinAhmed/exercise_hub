@@ -113,7 +113,17 @@ print("Reversed using 2p:", result)
 # time complexity: O(n)
 # space complexity: O(1)
 
+'''repeat'''
+def reverse_list_2p(arr):
+    n = len(arr)
+    i = 0
+    j = n-1
+    while i<j:
+        arr[i], arr[j] = arr[j], arr[i]
+        i = i+1
+        j = j-1
+    return arr
 
-
-
-
+arr= [-1, 0,1,2,3,4,5,6,7,8]
+result = reverse_list_2p(arr)
+print(f"Reversed list: {result}")
