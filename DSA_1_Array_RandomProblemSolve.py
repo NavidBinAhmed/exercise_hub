@@ -1,3 +1,5 @@
+import boto3
+
 '''### Beginner
 1. Find the maximum and minimum element in an array.
 _2. Reverse an array.
@@ -177,12 +179,3 @@ def fibonacci_tabulation(n):
 n = 10
 result = fibonacci_tabulation(n)
 print(f"The {n}th Fibonacci number using tabulation is: {result}")
-
-
-def fibonacci_O_n(n):
-    if n == 0:
-        return 0
-    a, b = 0, 1
-    for _ in range(1, n):
-        a, b = b, a + b
-    return b
