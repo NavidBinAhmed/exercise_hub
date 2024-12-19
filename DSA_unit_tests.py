@@ -1,5 +1,5 @@
 import unittest
-from exercise_hub.DSA_2_Array_RandomProblemSolve import reverse_array, sum_element, average_element
+from exercise_hub.DSA_1_Array_RandomProblemSolve import reverse_array, sum_element, average_element
 
 class TestArrayFunctions(unittest.TestCase):
 
