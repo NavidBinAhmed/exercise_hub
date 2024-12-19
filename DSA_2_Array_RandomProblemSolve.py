@@ -1,9 +1,9 @@
 
 '''### Beginner
 1. Find the maximum and minimum element in an array.
-2. Reverse an array.
-3. Find the sum of all elements in an array.
-4. Find the average of all elements in an array.
+_2. Reverse an array.
+_3. Find the sum of all elements in an array.
+_4. Find the average of all elements in an array.
 5. Check if an array contains a specific element.
 
 ### Intermediate
