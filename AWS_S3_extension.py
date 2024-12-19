@@ -19,6 +19,7 @@
 
 # However, you need to ensure that your AWS credentials are correctly configured and 
 # have the necessary permissions to access the S3 buckets.
+
 import boto3
 def convert_image_extension(bucket_name, new_bucket_name, old_extension, new_extension):
     s3 = boto3.client('s3')
