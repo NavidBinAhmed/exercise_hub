@@ -1,5 +1,3 @@
-import boto3
-
 '''### Beginner
 1. Find the maximum and minimum element in an array.
 _2. Reverse an array.
