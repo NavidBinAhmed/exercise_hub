@@ -23,6 +23,18 @@ print(set1)
 '''dictionary uses curly braces, and key:value pair'''
 '''key is unique not allowing duplicates like a sets' element'''
 
-dict1 ={'key': 'value'}
+dict1 ={'key': 'value', 'nationality': ''}
 print(dict1)
 print(type(dict1))
+
+'''we are entering the manual index number by ourselves as the key (name)'''
+'''in set index number is the key'''
+'''common thing is both uses hashmaps'''
+'''dictionary is mutable, as we see below BD is replaced by USA'''
+
+dictionary = {'name': 'navid', 'place': 'BD', 'email': 'navid@yahoo.com'}
+print(dictionary)
+print(dictionary['email'])
+print(dictionary['place'])
+dictionary['place'] = 'USA'
+print(dictionary)
