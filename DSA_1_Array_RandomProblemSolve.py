@@ -3,14 +3,14 @@
 _2. Reverse an array.
 _3. Find the sum of all elements in an array.
 _4. Find the average of all elements in an array.
-5. Check if an array contains a specific element.
+_5. Check if an array contains a specific element.
 
 ### Intermediate
-1. Find the second largest element in an array.
-2. Remove duplicates from an array.
-3. Rotate an array by `k` positions.
-4. Find the intersection of two arrays.
-5. Merge two sorted arrays.
+_1. Find the second largest element in an array.
+_2. Remove duplicates from an array.
+_3. Rotate an array by `k` positions.
+_4. Find the intersection of two arrays.
+_5. Merge two sorted arrays.
 
 ### Advanced
 1. Find the subarray with the maximum sum (Kadane's Algorithm).
