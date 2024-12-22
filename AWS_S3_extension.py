@@ -42,10 +42,7 @@ new_extension = '.JPG'
 convert_image_extension(bucket_name, new_bucket_name, old_extension, new_extension)
 
 
-
-
-
-
+import re
 def rename_images(bucket_name, new_bucket_name):
     s3 = boto3.client('s3')
     s3_resource = boto3.resource('s3')
@@ -71,8 +68,6 @@ bucket_name = 'incoming images'
 new_bucket_name = 'renamed images'
 
 rename_images(bucket_name, new_bucket_name)
-
-
 
 
 
