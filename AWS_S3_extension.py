@@ -20,7 +20,7 @@
 # However, you need to ensure that your AWS credentials are correctly configured and 
 # have the necessary permissions to access the S3 buckets.
 
-import boto3
+'''import boto3
 def convert_image_extension(bucket_name, new_bucket_name, old_extension, new_extension):
     s3 = boto3.client('s3')
     s3_resource = boto3.resource('s3')
@@ -39,10 +39,10 @@ new_bucket_name = 'revised_image'
 old_extension = '.PNG'
 new_extension = '.JPG'
 
-convert_image_extension(bucket_name, new_bucket_name, old_extension, new_extension)
+convert_image_extension(bucket_name, new_bucket_name, old_extension, new_extension)'''
 
 
-import re
+'''import re
 def rename_images(bucket_name, new_bucket_name):
     s3 = boto3.client('s3')
     s3_resource = boto3.resource('s3')
@@ -67,7 +67,7 @@ def rename_images(bucket_name, new_bucket_name):
 bucket_name = 'incoming images'
 new_bucket_name = 'renamed images'
 
-rename_images(bucket_name, new_bucket_name)
+rename_images(bucket_name, new_bucket_name)'''
 
 
 
