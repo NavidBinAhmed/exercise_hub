@@ -4569,8 +4569,8 @@ print(f"The result of the given expression: {result}")'''
 
 
 # problem 1
-numbers = [1095, 1094, 1095]
-# o/p = [1005, 1014, 1015]
+'''numbers = [1095, 1094, 1095]
+# o/p = [1005, 1014, 1015]'''
 
 '''
 1. we can see that, whatever order the input maintains
@@ -4600,13 +4600,7 @@ print(converted_numbers)'''
 #input = [5555, 4444, 3333, 2222, 1111]
 #output = [1555, 2444, 3033, 3222, 4111]
 
-
-
-
-
-
-
-# Python3 implementation of the approach 
+'''# Python3 implementation of the approach 
 DIGITS = 4; MIN = 1000; MAX = 9999; 
 
 # Function to return the minimum element 
@@ -4690,4 +4684,36 @@ if __name__ == "__main__" :
 
 	getList(arr, n)
 
-# This code is contributed by AnkitRai01 
+# This code is contributed by AnkitRai01'''
+
+
+'''def append_bits(x, L):
+    return [x + element for element in L]
+
+def generate_bit(n):
+    if n == 0: return []
+    if n == 1: return ["0", "1"]
+
+    else:
+        return (append_bits("0", generate_bit(n-1)) +
+                append_bits("1", generate_bit(n-1)))
+    
+print(generate_bit(3))
+'''
+''' o/p: ['000', '001', '010', '011', '100', '101', '110', '111']'''
+
+
+
+def fib(n):
+
+    if n<=1:
+        return n
+    
+    else:
+        return fib(n-2) + fib(n-1)
+    
+n = 8
+result = fib(n)
+print(result)
+
+'''0 1 1 2 3 5 8 13 21 34 55'''
