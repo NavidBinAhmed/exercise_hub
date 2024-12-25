@@ -4717,3 +4717,12 @@ result = fib(n)
 print(result)
 
 '''0 1 1 2 3 5 8 13 21 34 55'''
+
+def fact(n):
+    if n <=1:
+        return 1
+    else:
+        return n * fact(n-1)
+n = 4
+result = fact(n)
+print(f"Factorial of {n} is {result}")
