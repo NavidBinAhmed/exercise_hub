@@ -4703,8 +4703,8 @@ print(generate_bit(3))
 ''' o/p: ['000', '001', '010', '011', '100', '101', '110', '111']'''
 
 
-
-def fib(n):
+# fibonacci number
+'''def fib(n):
 
     if n<=1:
         return n
@@ -4715,10 +4715,11 @@ def fib(n):
 n = 8
 result = fib(n)
 print(result)
-
+'''
 '''0 1 1 2 3 5 8 13 21 34 55'''
 
-def fact(n):
+# factorial
+'''def fact(n):
     if n <=1:
         return 1
     else:
@@ -4726,3 +4727,66 @@ def fact(n):
 n = 4
 result = fact(n)
 print(f"Factorial of {n} is {result}")
+'''
+
+
+'''def fib(n):
+    if n <= 1:
+        return 1
+    else:
+        return fib(n-1) + fib(n-2) 
+
+#driver code 
+n = 6
+result = fib(n)
+print(f"Fib of {n}th number is {result}")
+
+#0 1 1 2 3 5 8 13'''
+
+'''def factorial(n):
+    if n <= 1:
+        return 1
+    else:
+        return n* factorial(n-1)
+    
+# driver code
+try:
+    n = int(input("Enter an integer: "))
+except:
+    print("Please enter an integer.")
+    n = int(input("Enter an integer: "))
+    result = factorial(n)
+    print(f"Factrial of {n} is {result}")
+
+else:
+    result = factorial(n)
+    print(f"the factrial of {n} is {result}")'''
+
+# find the index of an element
+
+
+def findindex(arr, n):
+    for i in range(len(arr)):
+        if arr[i] == n:
+            return i
+    return -1
+
+# driver code
+arr = [1,2,4,7,8,9]
+n = 8
+result = findindex(arr, n)
+print(f'The index of {n} is {result}')
+
+
+def index_i(arr, target):
+
+    for i in range(len(arr)):
+        if arr[i] == target:
+            return i
+    return -1
+
+# driver code
+arr = [12,3,4,23]
+target = 4
+result = index_i(arr, target)
+print(f"Index of {target} is {result}")
