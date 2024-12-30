@@ -12,18 +12,20 @@ result = fibonacci_memo(n)
 print(f"The {n}th Fibonacci number using memoization is: {result}")
 
 
-
+# practice
 def fib_memo(n, memo = {}):
     if n in memo:
         return memo[n]
-    if n <= 1:
+    
+    elif n <= 1:
         return n
-    memo[n] = fib_memo(n-1, memo) + fib_memo(n-2, memo)
-    return memo[n]
+    else:
+        memo[n] = fib_memo(n-1, memo) + fib_memo(n-2, memo)
+        return memo[n]
 
 n = 10
 result = fib_memo(n)
-print(f"The {n}th Fibonacci number using memoization is: {result}")
+print(f"The {n}th Fibonacci number using memoization (practice) is: {result}")
 
 # Fibonacci using recursion, time complexity = O(2^n).
 def fib(n):
