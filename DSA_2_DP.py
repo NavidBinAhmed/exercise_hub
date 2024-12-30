@@ -1,4 +1,4 @@
-# Optimized Fibonacci using dynamic programming memoization, time complexity = O(n)
+# Fibonacci using DP memoization, time complexity = O(n)
 def fibonacci_memo(n, memo={}):
     if n in memo:
         return memo[n]
@@ -11,7 +11,34 @@ n = 10
 result = fibonacci_memo(n)
 print(f"The {n}th Fibonacci number using memoization is: {result}")
 
-# Optimized Fibonacci using dynamic programming tabulation, time complexity = O(n)
+
+
+def fib_memo(n, memo = {}):
+    if n in memo:
+        return memo[n]
+    if n <= 1:
+        return n
+    memo[n] = fib_memo(n-1, memo) + fib_memo(n-2, memo)
+    return memo[n]
+
+n = 10
+result = fib_memo(n)
+print(f"The {n}th Fibonacci number using memoization is: {result}")
+
+# Fibonacci using recursion, time complexity = O(2^n).
+def fib(n):
+    if n <= 1:
+        return n
+    else:
+        return fib(n-1) + fib(n-2)
+    
+n = 10
+result = fib(n)
+print(f"The {n}th Fibonacci number using recursion is: {result}")
+
+
+
+# Fibonacci using DP tabulation, time complexity = O(n)
 def fibonacci_tabulation(n):
     if n == 0:
         return 0
