@@ -4811,7 +4811,7 @@ student1 = Marksheet("Rayan", '123', "Class II", "Computer", 89)
 student1.result()'''
 
 # Polymorphism
-class Animal:
+'''class Animal:
     def speak(self):
         return "Sound of animal"
     
@@ -4904,3 +4904,26 @@ car = Car()
 motorcycle = Motorcycle()
 start_vehicle(car)
 start_vehicle(motorcycle)
+'''
+
+def binary(arr, i, j, target):
+    if j >= i:
+        mid = i + (j-i)//2
+        
+        if arr[mid] == target:
+            return mid
+        
+        elif arr[mid] > target:
+            return binary(arr, i, mid-1, target)
+        
+        else:
+            return binary(arr, mid+1, j, target)
+    return -1
+
+# driver code
+arr = [1,2,3,4,5,6,7,8]
+i = 0
+j = len(arr) - 1
+target = 2
+result = binary(arr, i, j, target)
+print(f"Target index in {result}.")
