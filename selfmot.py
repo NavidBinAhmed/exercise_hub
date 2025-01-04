@@ -4763,9 +4763,7 @@ else:
     print(f"the factrial of {n} is {result}")'''
 
 # find the index of an element
-
-
-def findindex(arr, n):
+'''def findindex(arr, n):
     for i in range(len(arr)):
         if arr[i] == n:
             return i
@@ -4775,10 +4773,10 @@ def findindex(arr, n):
 arr = [1,2,4,7,8,9]
 n = 8
 result = findindex(arr, n)
-print(f'The index of {n} is {result}')
+print(f'The index of {n} is {result}')'''
 
 
-def index_i(arr, target):
+'''def index_i(arr, target):
 
     for i in range(len(arr)):
         if arr[i] == target:
@@ -4789,4 +4787,120 @@ def index_i(arr, target):
 arr = [12,3,4,23]
 target = 4
 result = index_i(arr, target)
-print(f"Index of {target} is {result}")
+print(f"Index of {target} is {result}")'''
+
+# write a student mark class
+
+
+'''class Marksheet:
+    def __init__(self, name, ID, grade, subject, marks):
+        self.name = name
+        self.ID = ID
+        self.grade = grade
+        self.subject = subject
+        self.marks = marks
+
+    def result(self):
+        if self.marks > 60:
+            print("Student passed")
+        else:
+            print("Student failed")
+
+
+student1 = Marksheet("Rayan", '123', "Class II", "Computer", 89)
+student1.result()'''
+
+# Polymorphism
+class Animal:
+    def speak(self):
+        return "Sound of animal"
+    
+
+class Dog(Animal):
+    def speak(self):
+        return "Gheu"
+    
+class Cat(Animal):
+    def speak(self):
+        return "Meaw"    
+
+# function demonstrating polymorphism
+def animal_speak(animal):
+    print(animal.speak())
+
+# inherited to the child class from the base Animal class
+dog = Dog()
+print(dog.speak())
+
+cat = Cat()
+print(cat.speak())
+
+print(Animal().speak())
+
+animal_speak(cat)
+
+
+# polymorphism with functions and methods
+# base class
+
+class Shape:
+    def area(self):
+        return "The area of the figure"
+    
+# derived class 1
+class Rectangle(Shape):
+    def __init__(self, width, height):
+        self.width = width
+        self.height = height
+
+    def area(self):
+        return self.width * self.height
+    
+# derived class 2
+class Circle(Shape):
+    def __init__(self, radius):
+        self.radius = radius
+
+    def area(self):
+        return 3.14 * self.radius * self.radius
+
+# function that demonstrates polymorphism
+def print_area(shape):
+    print(f"The area is {shape.area()} square units")
+
+rectangle = Rectangle(4,5)
+circle = Circle(3)
+
+print_area(rectangle)
+print_area(circle)
+
+
+# Polymorphism with abstract base class
+from abc import ABC, abstractmethod
+
+# define an abstract class: complete empty class
+class Vehicle(ABC):
+    @abstractmethod
+    def start_engine(self):
+        pass
+
+# derived class 1
+class Car(Vehicle):
+    def start_engine(self):
+        return "Car engine started"
+    
+# derived class 2
+class Motorcycle(Vehicle):
+    def start_engine(self):
+        return "Motorcycle engine started"
+    
+
+# function demostrating polumorphism
+def start_vehicle(vehicle):
+    print(vehicle.start_engine())
+
+# create objects of car and motorcycle
+car = Car()
+motorcycle = Motorcycle()
+start_vehicle(car)
+start_vehicle(motorcycle)
