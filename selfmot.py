@@ -4906,7 +4906,8 @@ start_vehicle(car)
 start_vehicle(motorcycle)
 '''
 
-def binary(arr, i, j, target):
+# binary search using recursion
+'''def binary(arr, i, j, target):
     if j >= i:
         mid = i + (j-i)//2
         
@@ -4926,4 +4927,19 @@ i = 0
 j = len(arr) - 1
 target = 2
 result = binary(arr, i, j, target)
-print(f"Target index in {result}.")
+print(f"Target index in {result}.")'''
+
+# search using iterative approach
+'''def binarysearch(arr, target):
+
+    for i in range(len(arr)+1):
+        if arr[i] == target:
+            return arr[i], i
+    return False
+
+# driver code
+arr = [1,2,3,4,5]
+target = 1
+result = binarysearch(arr, target)
+print(f"index is {result}.")
+'''
