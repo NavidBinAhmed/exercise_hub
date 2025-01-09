@@ -1,5 +1,6 @@
 '''1. find the index of the first infinity from an array'''
 
+'''recursion binary search approach'''
 def infsearch(arr, i, j, target):
 
   if i > j:
@@ -27,3 +28,13 @@ j = len(arr)
 target = float('inf')
 result = infsearch(arr, i, j, target)
 print(f"Index of the first infinity is {result}")
+
+
+'''linear approach'''
+arr_2 = [1, 2, 3, 6, 7, 9, 12, float('inf'), float('inf')]
+
+target = float('inf')
+
+for i in range(len(arr_2)-1):
+  if arr_2[i] == target:
+    print(i)
