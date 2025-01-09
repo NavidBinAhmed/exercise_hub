@@ -4943,3 +4943,31 @@ target = 1
 result = binarysearch(arr, target)
 print(f"index is {result}.")
 '''
+
+
+# binary search
+def bin(arr, i, j, n):
+
+    if j < i:
+        return False
+    
+    else:
+        mid = i + (j-i)//2
+
+        if n < arr[mid]:
+            return bin(arr, i, mid-1, n)
+        
+        if n > arr[mid]:
+            return bin(arr, mid+1, j, n)
+        
+        if arr[mid] == n:
+            return mid
+        
+    return -1
+
+arr = [1, 2, 3, 4, 5, 6, 7, 8]
+n = 9
+i = 0
+j = len(arr)-1
+result = bin(arr, i, j, n)
+print(f"{n} is present at the {result}th index.")
