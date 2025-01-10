@@ -5027,6 +5027,6 @@ arr = [[1, 3, 5],
        [4, 6, 9],
        [9, 10, 12]]
 
-target = 15
+target = 10
 result = s2a(arr, target)
 print(result)
