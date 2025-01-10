@@ -22,9 +22,9 @@ def infsearch(arr, i, j, target):
   return -1
 
 # driver code
-arr = [1, 2, 3, 6, 7, 9, 12, float('inf'), float('inf')]
+arr = [1, 2, 3, 6, 7, 9, float('inf')]
 i = 0
-j = len(arr)
+j = len(arr)-1
 target = float('inf')
 result = infsearch(arr, i, j, target)
 print(f"Index of the first infinity is {result}")

@@ -4946,7 +4946,7 @@ print(f"index is {result}.")
 
 
 # binary search
-def bin(arr, i, j, n):
+'''def bin(arr, i, j, n):
 
     if j < i:
         return False
@@ -4970,4 +4970,29 @@ n = 9
 i = 0
 j = len(arr)-1
 result = bin(arr, i, j, n)
-print(f"{n} is present at the {result}th index.")
+print(f"{n} is present at the {result}th index.")'''
+
+# binary search
+'''find a target element'''
+
+'''def binary(arr, i, j, target):
+    if i > j:
+        return False
+    
+    if i < j:
+        mid = i + (j-i)//2
+        if arr[mid] == target:
+            return mid
+        if arr[mid] > target:
+            return binary(arr, i, mid-1, target)
+        if arr[mid] < target:
+            return binary(arr, mid+1, j, target)
+    return -1
+
+# driver code
+arr = [1,2,3,4,5,6,7,8]
+i = 0
+j = len(arr)
+target = 2
+result = binary(arr, i, j, target)
+print(f"index of target is {result}")'''
