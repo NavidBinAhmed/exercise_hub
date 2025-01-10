@@ -4997,10 +4997,8 @@ target = 2
 result = binary(arr, i, j, target)
 print(f"index of target is {result}")'''
 
-
 # from a 2d array, find the element [2][2]
-
-def s2a(arr, target):
+'''def s2a(arr, target):
 
     for i in range(len(arr)):
         for j in range(len(arr[i])):
@@ -5013,4 +5011,22 @@ arr = [[1, 3, 5],
 
 target = arr[1][2]
 result = s2a(arr, target)
-print(f"The element of the given index is {result}.")
+print(f"The element of the given index is {result}.")'''
+
+# if the target exists, function returns true
+def s2a(arr, target):
+
+    for i in range(len(arr)):
+        for j in range(len(arr[i])):
+            if arr[i][j] == target:
+                return True
+    return False
+            
+# driver code
+arr = [[1, 3, 5],
+       [4, 6, 9],
+       [9, 10, 12]]
+
+target = 15
+result = s2a(arr, target)
+print(result)
