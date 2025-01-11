@@ -60,3 +60,38 @@ nums = [2, 3, 0, 2, 1, 3, 1, 0, 3]
 solution = Solution()
 solution.sortColors(nums)
 print(nums)  # Output should be [0, 0, 1, 1, 2, 2]
+
+
+# from a 2d array, find the element [2][2]
+def s2a(arr, target):
+
+    for i in range(len(arr)):
+        for j in range(len(arr[i])):
+            if arr[i][j] == target:
+                return target
+# driver code
+arr = [[1, 3, 5],
+       [4, 6, 9],
+       [9, 10, 12]]
+
+target = arr[1][2]
+result = s2a(arr, target)
+print(f"The element of the given index is {result}.")
+
+# if the target exists, function returns true
+def s2a(arr, target):
+
+    for i in range(len(arr)):
+        for j in range(len(arr[i])):
+            if arr[i][j] == target:
+                return True
+    return False
+            
+# driver code
+arr = [[1, 3, 5],
+       [4, 6, 9],
+       [9, 10, 12]]
+
+target = 15
+result = s2a(arr, target)
+print(result)
