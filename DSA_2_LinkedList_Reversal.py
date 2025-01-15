@@ -1,7 +1,9 @@
 
 '''reverse a linked list
 
-2 (200) -> 4(400) -> 8(500) -> 16(None)'''
+2(200) -> 4(400) -> 8(500) -> 16(None)
+16(None) -> 8(500) -> 4(400) -> 2(200)
+'''
 
 class linkedList:
     def __init__(self):
