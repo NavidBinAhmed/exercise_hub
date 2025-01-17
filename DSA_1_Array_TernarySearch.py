@@ -3,31 +3,31 @@
 def ternarySearch(arr, i, j, target):
     if i > j:
         return False
-    if i <= j:
+    elif i <= j:
         mid1 = i + (j-i)//3
         mid2 = j - (j-i)//3
         
         if target == arr[mid1]:
             return mid1
-        if target == arr[mid2]:
+        elif target == arr[mid2]:
             return mid2
         
-        if target < arr[mid1]:
+        elif target < arr[mid1]:
             return ternarySearch(arr, i, mid1-1, target)
         
-        if target > arr[mid1] and target < arr[mid2]:
+        elif target > arr[mid1] and target < arr[mid2]:
             return ternarySearch(arr, mid1+1, mid2-1, target)
         
-        if target > arr[mid2]:
+        elif target > arr[mid2]:
             return ternarySearch(arr, mid2+1, j, target)
     
-    return -1
+        return -1
     
 # driver code
 arr = [1,2,3,4,5,6,7,8,9,11,14,16,17,18,23]
 i = 0
 j = len(arr) - 1
-target = 24
+target = 11
 # function calling
 result = ternarySearch(arr, i, j, target)
 print(f"The index is {result}.")
