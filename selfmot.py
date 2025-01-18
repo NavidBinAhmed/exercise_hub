@@ -5014,7 +5014,7 @@ result = s2a(arr, target)
 print(f"The element of the given index is {result}.")'''
 
 # if the target exists, function returns true
-def s2a(arr, target):
+'''def s2a(arr, target):
 
     for i in range(len(arr)):
         for j in range(len(arr[i])):
@@ -5029,4 +5029,17 @@ arr = [[1, 3, 5],
 
 target = 10
 result = s2a(arr, target)
-print(result)
+print(result)'''
+
+
+
+#bubble sorting - hom many are not sorted
+# 1,2; 1,4 sorted (3)
+# 6,3; 3,1; 1,4; 4,1 not sorted (4)
+
+list = [1,2,3,6,1,4,5,6,7,8]
+count = 0
+for j in range(0, len(list) - 1):  # 0 to 5 = 6 total
+    if list[j] > list[j+1] or list[j] < list[j-1]:   # for 2; 2>!6 (NO) + NO = NO; for 6: Y; for 3: Y, for 1: Y for 4 Y
+        count = count+1
+print(count)

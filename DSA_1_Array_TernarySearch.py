@@ -32,6 +32,7 @@ target = 11
 result = ternarySearch(arr, i, j, target)
 print(f"The index is {result}.")
 
+'''T = O(lon_3 n)'''
 
 '''def ts(arr, i, j, target):
     if j < i:
