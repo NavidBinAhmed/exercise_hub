@@ -34,7 +34,8 @@ def fib_last_digits(n, digits):
             b = b[-digits:]  # Keep only the last `digits` digits
     
     return b
-
+
+
 last_4_digits = fib_last_digits(1000000)
 print(''.join(map(str, last_4_digits)))'''
 
@@ -66,7 +67,8 @@ def matrix_pow(matrix, n):
 
 
 #Returns n-th Fibonacci using matrix expo
-def fib(n):
+def fib(n):
+
     if n == 0:
         return 0
     if n == 1:
@@ -75,7 +77,8 @@ def fib(n):
     F = [[1, 1], [1, 0]]
     result = matrix_pow(F, n - 1)
     return result[0][0]
-
+
+
 fib_1000000 = fib(1000000)
 print(fib_1000000)'''
 
@@ -98,7 +101,8 @@ print(fib_1000000)'''
 
 
 #Computing n-th Fibonacci using array representation
-def fib_large(n):
+def fib_large(n):
+
     if n == 0:
         return [0]
     if n == 1:
@@ -110,11 +114,13 @@ def fib_large(n):
         c = add_large_numbers(a, b)
         a, b = b, c
     return b
-
+
+
 fib_1000000 = fib_large(1000000)
 print("".join(map(str, fib_1000000)))  
 #It cnverts array of digits to string
-
+
+
 print("".join(map(str, fib_1000000[-4:])))
 '''
 
@@ -137,7 +143,8 @@ print("".join(map(str, fib_1000000[-4:])))
 
 
 #computation func
-def fib_large_str(n):
+def fib_large_str(n):
+
     if n == 0:
         return "0"
     if n == 1:
@@ -149,13 +156,16 @@ def fib_large_str(n):
         c = add_large_numbers_str(a, b)
         a, b = b, c
     return b
-
+
+
 fib_1000000_str = fib_large_str(1000000)
 print(fib_1000000_str)
-
+
+
 
 #modular arithmetic
-'''def fib_large_mod(n, mod=10000):
+def fib_large_mod(n, mod=10000):
+
     if n == 0:
         return 0
     if n == 1:
@@ -167,7 +177,8 @@ print(fib_1000000_str)
         c = (a + b) % mod
         a, b = b, c
     return b
-
+
+
 fib_1000000_mod = fib_large_mod(1000000)
 print(fib_1000000_mod)'''
 
@@ -176,7 +187,7 @@ print(fib_1000000_mod)'''
 '''def fib_large(n):
 
 #Using arbitrary-precision integers
-    if n == 0:
+if n == 0:
         return 0
     if n == 1:
         return 1
@@ -189,13 +200,12 @@ print(fib_1000000_mod)'''
     return b
 
 fib_1000000 = fib_large(1000000)
-print(fib_1000000)
-'''
+print(fib_1000000)'''
 
-'''def fib_large_mod(n, mod=10**100):
+'''def fib_large_mod(n, mod=10**100):'''
 
 #using modular arithmetic
-    if n == 0:
+'''    if n == 0:
         return 0
     if n == 1:
         return 1
@@ -206,19 +216,19 @@ print(fib_1000000)
         c = (a + b) % mod
         a, b = b, c
     return b
-
+
+
 fib_1000000_mod = fib_large_mod(1000000)
 print(fib_1000000_mod)'''
 
-'''
-now, will compare time and space complexity among matrix exponentiation (ok), array representation(not even run), 
-string representation (not even run), IDP (ok), modular arithmetic ()
-'''
+# now, will compare time and space complexity among matrix exponentiation (ok), array representation(not even run), 
+# string representation (not even run), IDP (ok), modular arithmetic ()
 
 #dedimal, fixed & floating point arithmatic
-from decimal import Decimal, getcontext
+'''from decimal import Decimal, getcontext
 
-def fibonacci_fixed_point(n):
+def fibonacci_fixed_point(n):
+
     if n == 0:
         return Decimal('0')
     if n == 1:
@@ -234,7 +244,19 @@ def fibonacci_fixed_point(n):
 getcontext().prec = 100
 
 fib_1000000 = fibonacci_fixed_point(1000000)
-print(fib_1000000)
+print(fib_1000000)'''
 
 
-
+def fn(n):
+    
+    if n == 0:
+        return 0
+    if n == 1:
+        return 1
+    else:
+        return fn(n-2) + fn(n-1)
+    
+# driver code
+n = 14
+result = fn(n)
+print(f"Fibnacci number for {n} is {result}")
