@@ -5058,11 +5058,20 @@ else:
     print("Under")'''
     
     
-age = 17
+'''age = 17
 
 if age < 13:
     print("Child")
 elif age < 18:
     print("Teen")
 else:
-    print("Adult")
+    print("Adult")'''
+    
+    
+    
+year = 2001
+
+if year % 4 == 0:
+    print("Leap year")
+else:
+    print("Not LP")
