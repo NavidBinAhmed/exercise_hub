@@ -1,4 +1,4 @@
-[![My Skills](https://skillicons.dev/icons?i=python&theme=light)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=python,csharp&theme=light)](https://skillicons.dev)
 
 ## Python
 ## DSA
