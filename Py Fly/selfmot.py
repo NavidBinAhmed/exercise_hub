@@ -5074,4 +5074,4 @@ year = 2001
 if year % 4 == 0:
     print("Leap year")
 else:
-    print("Not LP")
+    print("Not Leap Year")
