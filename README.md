@@ -1,9 +1,10 @@
-[![My Skills](https://skillicons.dev/icons?i=python,cs,js&theme=light)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=python,js,cs&theme=light)](https://skillicons.dev)
 
 ## Python
-## DSA
+## DSA - Python
 ## DSA - Leetcode
 ## C#
+## JavaScript 
 
 ## Feature Engineerting and EDA 
 
